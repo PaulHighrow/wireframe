@@ -4,6 +4,7 @@ import { About } from './About/About';
 import { Services } from './Services/Services';
 import { Testimonials } from './Testimonials/Testimonials';
 import { MainFooter } from './MainFooter/MainFooter';
+import { LeadForm } from './LeadForm/LeadForm';
 
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
       <Services />
       <Testimonials />
       <MainFooter />
+      <LeadForm />
     </>
   );
 };

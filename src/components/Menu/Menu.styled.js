@@ -85,9 +85,11 @@ export const Logo = styled(GiGraduateCap)`
   flex-shrink: 0;
   height: 100%;
   fill: var(--secondary-color);
+  transition: transform var(--animation-global);
 
   ${LogoLink}:hover & {
     fill: red;
+    transform: scale(1.2);
   }
 `;
 

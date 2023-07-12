@@ -75,7 +75,7 @@ export const Contacts = styled.div``;
 
 export const ContactsList = styled.ul`
   display: grid;
-  gap: 15px;
+  gap: 10px;
 `;
 
 export const ContactLink = styled.a`
