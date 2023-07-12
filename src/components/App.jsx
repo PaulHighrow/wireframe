@@ -1,16 +1,20 @@
+import { Hero } from './Hero/Hero';
+import { Menu } from './Menu/Menu';
+import { About } from './About/About';
+import { Services } from './Services/Services';
+import { Testimonials } from './Testimonials/Testimonials';
+import { MainFooter } from './MainFooter/MainFooter';
+
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Menu />
+      <Hero />
+      <About />
+      <Services />
+      <Testimonials />
+      <MainFooter />
+    </>
   );
 };

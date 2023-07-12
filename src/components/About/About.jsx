@@ -1,0 +1,71 @@
+import { Box } from 'components/Box/Box.styled';
+import {
+  AboutSection,
+  SectionTitle,
+  AboutLeadBtn,
+  AboutList,
+  AboutListItem,
+  AboutText,
+  AboutAccent,
+  AboutPic,
+  AboutImg,
+} from './About.styled';
+
+import { aboutImgsIndex } from 'img/aboutUs/aboutImgs';
+const {
+  about1Jpeg,
+  about1Webp,
+  about2Jpeg,
+  about2Webp,
+  about3Jpeg,
+  about3Webp,
+} = aboutImgsIndex;
+
+export const About = () => {
+  return (
+    <AboutSection id="aboutus">
+      <Box>
+        <SectionTitle>Про нас</SectionTitle>
+        <AboutList>
+          <AboutListItem>
+            <AboutText>
+              <AboutAccent>А ми такі, нічогенькі:</AboutAccent> Skillhub
+              Education – надає можливість вступити в навчальний заклад, поїхати
+              на стажування, отримати роботу та в разі потреби - пройти курси
+              підвищення кваліфікації.
+            </AboutText>
+            <AboutPic>
+              <source srcSet={`${about1Webp} 1x`} type="image/webp" />
+              <AboutImg src={`${about1Jpeg}`} alt="About us 1 image" />
+            </AboutPic>
+          </AboutListItem>
+          <AboutListItem>
+            <AboutPic>
+              <source srcSet={`${about2Webp} 1x`} type="image/webp" />
+              <AboutImg src={`${about2Jpeg}`} alt="About us 2 image" />
+            </AboutPic>
+            <AboutText>
+              <AboutAccent>Можемо й краще, але шо вже:</AboutAccent> Skillhub
+              Education – надає можливість вступити в навчальний заклад, поїхати
+              на стажування, отримати роботу та в разі потреби - пройти курси
+              підвищення кваліфікації.
+            </AboutText>
+          </AboutListItem>
+          <AboutListItem>
+            <AboutText>
+              <AboutAccent>Купляй в нас щось або заявку залиши:</AboutAccent>{' '}
+              Skillhub Education – надає можливість вступити в навчальний
+              заклад, поїхати на стажування, отримати роботу та в разі потреби -
+              пройти курси підвищення кваліфікації.
+            </AboutText>
+            <AboutPic>
+              <source srcSet={`${about3Webp} 1x`} type="image/webp" />
+              <AboutImg src={`${about3Jpeg}`} alt="About us 3 image" />
+            </AboutPic>
+          </AboutListItem>
+        </AboutList>
+        <AboutLeadBtn>Надіслати заявку</AboutLeadBtn>
+      </Box>
+    </AboutSection>
+  );
+};
