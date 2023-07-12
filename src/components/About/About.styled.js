@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LeadBtn } from 'components/Menu/Menu.styled';
+import raysIcon from 'img/svg/rays.svg';
 
 export const AboutSection = styled.section`
   position: relative;
@@ -22,6 +23,22 @@ export const AboutLeadBtn = styled(LeadBtn)`
   max-width: 200px;
   text-align: center;
   padding: 10px;
+
+  &::before {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    display: none;
+    content: url(${raysIcon});
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    display: block;
+  }
 `;
 
 export const AboutList = styled.ul`

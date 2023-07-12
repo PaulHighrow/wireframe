@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { GiGraduateCap } from 'react-icons/gi';
 import { IoMenu } from 'react-icons/io5';
+import raysIcon from 'img/svg/rays.svg';
 
 export const Header = styled.header`
   padding: 0 40px;
@@ -97,12 +98,29 @@ export const LeadBtn = styled.a`
   border-radius: 20px;
   background-color: var(--secondary-color);
   text-align: center;
+  position: relative;
 
   &:hover,
   &:focus {
     background-color: #fff;
     border-color: var(--secondary-color);
     color: var(--main-color);
+  }
+
+  &::before {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    display: none;
+    content: url(${raysIcon});
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    display: block;
   }
 
   @media screen and (min-width: 1000px) {

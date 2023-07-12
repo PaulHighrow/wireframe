@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import webpBg from '../../img/hero/hero-bg.webp';
 import jpegBg from '../../img/hero/hero-bg.jpg';
 import { LeadBtn } from 'components/Menu/Menu.styled';
+import raysIcon from 'img/svg/rays.svg';
 
 export const HeroSection = styled.section`
   position: relative;
@@ -32,6 +33,21 @@ export const HeroLeadBtn = styled(LeadBtn)`
 
   text-align: center;
   padding: 10px 40px;
-  bottom: 30px;
-  
+  bottom: 30%;
+
+  &::before {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    display: none;
+    content: url(${raysIcon});
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    display: block;
+  }
 `;
