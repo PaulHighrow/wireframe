@@ -93,7 +93,7 @@ export const Logo = styled(GiGraduateCap)`
   }
 `;
 
-export const LeadBtn = styled.a`
+export const LeadBtn = styled.button`
   padding: 10px 10px;
   font-weight: 700;
   border: 2px solid #fff;

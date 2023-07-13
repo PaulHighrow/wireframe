@@ -39,7 +39,7 @@ const {
   tstmMarq4png,
 } = tstmImgsIndex;
 
-export const Testimonials = () => {
+export const Testimonials = ({ toggleModal }) => {
   return (
     <TestimonialSection id="testimonials">
       <Box>
@@ -184,7 +184,7 @@ export const Testimonials = () => {
             alt="Testimonial placeholder"
           />
         </StyledMarquee>
-        <AboutLeadBtn>Надіслати заявку</AboutLeadBtn>
+        <AboutLeadBtn onClick={toggleModal}>Надіслати заявку</AboutLeadBtn>
       </Box>
     </TestimonialSection>
   );

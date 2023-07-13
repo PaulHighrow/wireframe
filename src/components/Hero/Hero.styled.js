@@ -11,6 +11,8 @@ export const HeroSection = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(100vh - 80px);
+  display: flex;
+  align-items: end;
   padding: 30px;
 `;
 
@@ -27,13 +29,11 @@ export const Title = styled.h1`
 `;
 
 export const HeroLeadBtn = styled(LeadBtn)`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
 
   text-align: center;
   padding: 10px 40px;
-  bottom: 30%;
+  margin-bottom: 100px;
 
   &::before {
     position: absolute;

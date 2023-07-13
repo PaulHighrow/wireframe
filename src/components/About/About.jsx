@@ -21,7 +21,7 @@ const {
   about3Webp,
 } = aboutImgsIndex;
 
-export const About = () => {
+export const About = ({ toggleModal }) => {
   return (
     <AboutSection id="aboutus">
       <Box>
@@ -64,7 +64,7 @@ export const About = () => {
             </AboutPic>
           </AboutListItem>
         </AboutList>
-        <AboutLeadBtn>Надіслати заявку</AboutLeadBtn>
+        <AboutLeadBtn onClick={ toggleModal }>Надіслати заявку</AboutLeadBtn>
       </Box>
     </AboutSection>
   );

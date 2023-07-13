@@ -10,7 +10,7 @@ import {
   MobileMenuIcon,
 } from './Menu.styled';
 
-export const Menu = () => {
+export const Menu = ({ toggleModal }) => {
   return (
     <Header>
       <LogoLink href="#">
@@ -35,7 +35,7 @@ export const Menu = () => {
           </li>
         </NavList>
       </Nav>
-      <LeadBtn> Надіслати заявку </LeadBtn>
+      <LeadBtn onClick={toggleModal}> Надіслати заявку </LeadBtn>
       <MobileMenuBtn>
         <MobileMenuIcon />
       </MobileMenuBtn>
