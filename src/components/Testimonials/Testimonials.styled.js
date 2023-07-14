@@ -4,8 +4,17 @@ import { Swiper } from 'swiper/react';
 
 export const TestimonialSection = styled.section`
   position: relative;
-  padding: 40px;
   background-color: var(--main-color);
+
+  padding: 20px 10px;
+
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 40px;
+  }
 `;
 
 export const TestimonialPic = styled.picture`
@@ -37,4 +46,3 @@ export const StyledMarquee = styled(Marquee)`
   margin: 0 auto;
   margin-bottom: 40px;
 `;
-

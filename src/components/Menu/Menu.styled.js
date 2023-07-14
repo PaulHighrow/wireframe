@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 import { GiGraduateCap } from 'react-icons/gi';
 import { IoMenu } from 'react-icons/io5';
-import raysIcon from 'img/svg/rays.svg';
+
+import raysBoldIcon from 'img/svg/rays-b.svg';
+import raysIconDeformed from 'img/svg/rays-b-d.svg';
 
 export const Header = styled.header`
-  padding: 0 40px;
+  padding: 0 10px;
   height: 80px;
   background-color: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 40px;
+  }
 `;
 
 export const MobileMenuBtn = styled.button`
@@ -23,6 +33,8 @@ export const MobileMenuBtn = styled.button`
   justify-content: center;
   align-items: center;
 
+  position: relative;
+
   &:hover,
   &:focus {
     background-color: var(--secondary-color);
@@ -30,6 +42,22 @@ export const MobileMenuBtn = styled.button`
 
   @media screen and (min-width: 768px) {
     display: none;
+  }
+
+  &::before {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    content: url(${raysIconDeformed});
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    opacity: 0;
+    transition: opacity var(--animation-global);
+  }
+
+  &:active::before {
+    opacity: 1;
   }
 `;
 
@@ -44,34 +72,16 @@ export const MobileMenuIcon = styled(IoMenu)`
   }
 `;
 
-export const Navigation = styled.nav`
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  @media screen and (min-width: 1000px) {
-    font-size: 20px;
-  }
-`;
-export const NavigationList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
+export const PhoneNumber = styled.a`
+  font-size: 20px;
+  font-weight: 500;
   color: var(--secondary-color);
-  justify-content: center;
-`;
-export const NavigationLink = styled.a`
   text-decoration: none;
-  text-transform: uppercase;
-  color: var(--secondary-color);
   transition: color var(--animation-global);
+
   &:hover,
   &:focus {
-    color: white;
+    color: red;
   }
 `;
 
@@ -115,9 +125,9 @@ export const LeadBtn = styled.button`
 
   &::before {
     position: absolute;
-    left: -12px;
-    top: -12px;
-    content: url(${raysIcon});
+    left: -22px;
+    top: -20px;
+    content: url(${raysBoldIcon});
     width: 25px;
     height: 25px;
     margin-right: 5px;

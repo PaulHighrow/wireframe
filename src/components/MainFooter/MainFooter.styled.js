@@ -1,5 +1,6 @@
-import { Logo, LogoLink } from 'components/Menu/Menu.styled';
 import styled from 'styled-components';
+import { Logo, LogoLink } from 'components/Menu/Menu.styled';
+
 import {
   AiOutlineFacebook,
   AiOutlineYoutube,
@@ -8,8 +9,17 @@ import {
 import { BiLogoTiktok } from 'react-icons/bi';
 
 export const Footer = styled.footer`
-  padding: 40px;
   background-color: var(--secondary-color);
+
+  padding: 10px;
+
+@media screen and (min-width: 768px) {
+  padding: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  padding: 40px;
+}
 `;
 
 export const FooterLogo = styled(Logo)`
@@ -28,8 +38,14 @@ export const FooterTitle = styled.h3`
 
 export const FooterWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 40px;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const FooterSocials = styled.div`
@@ -96,6 +112,8 @@ export const ContactLink = styled.a`
   font-size: 20px;
   font-weight: 500;
   transition: color var(--animation-global);
+  text-decoration: none;
+  color: var(--main-color);
 
   &:hover,
   &:focus {

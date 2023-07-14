@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 import { LeadBtn } from 'components/Menu/Menu.styled';
-import raysIcon from 'img/svg/rays.svg';
+import raysBoldIcon from 'img/svg/rays-b.svg';
 
 export const AboutSection = styled.section`
   position: relative;
-  padding: 40px;
   background-color: var(--main-color);
+
+  padding: 20px 10px;
+
+@media screen and (min-width: 768px) {
+  padding: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  padding: 40px;
+}
 `;
 
 export const SectionTitle = styled.h2`
@@ -25,10 +34,10 @@ export const AboutLeadBtn = styled(LeadBtn)`
 
   &::before {
     position: absolute;
-    left: -12px;
-    top: -12px;
+    left: -22px;
+    top: -20px;
     opacity: 0;
-    content: url(${raysIcon});
+    content: url(${raysBoldIcon});
     width: 25px;
     height: 25px;
     margin-right: 5px;
@@ -50,8 +59,13 @@ export const AboutList = styled.ul`
 
 export const AboutListItem = styled.li`
   display: flex;
+  flex-direction: column;
   gap: 15px;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const AboutPic = styled.picture`
