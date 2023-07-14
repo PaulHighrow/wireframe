@@ -64,7 +64,7 @@ export const About = ({ toggleModal }) => {
             </AboutPic>
           </AboutListItem>
         </AboutList>
-        <AboutLeadBtn onClick={ toggleModal }>Надіслати заявку</AboutLeadBtn>
+        <AboutLeadBtn onClick={toggleModal}>Надіслати заявку</AboutLeadBtn>
       </Box>
     </AboutSection>
   );

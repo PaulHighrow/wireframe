@@ -2,9 +2,9 @@ import {
   Header,
   Logo,
   LogoLink,
-  Nav,
-  Navink,
-  NavList,
+  Navigation,
+  NavigationLink,
+  NavigationList,
   LeadBtn,
   MobileMenuBtn,
   MobileMenuIcon,
@@ -16,25 +16,25 @@ export const Menu = ({ toggleModal }) => {
       <LogoLink href="#">
         <Logo />
       </LogoLink>
-      <Nav>
-        <NavList>
+      <Navigation>
+        <NavigationList>
           <li>
-            <Navink href="#">Головна</Navink>
+            <NavigationLink href="#">Головна</NavigationLink>
           </li>
           <li>
-            <Navink href="#aboutus">Про нас</Navink>
+            <NavigationLink href="#aboutus">Про нас</NavigationLink>
           </li>
           <li>
-            <Navink href="#services">Послуги</Navink>
+            <NavigationLink href="#services">Послуги</NavigationLink>
           </li>
           <li>
-            <Navink href="#testimonials">Відгуки</Navink>
+            <NavigationLink href="#testimonials">Відгуки</NavigationLink>
           </li>
           <li>
-            <Navink href="#contacts">Контакти</Navink>
+            <NavigationLink href="#contacts">Контакти</NavigationLink>
           </li>
-        </NavList>
-      </Nav>
+        </NavigationList>
+      </Navigation>
       <LeadBtn onClick={toggleModal}> Надіслати заявку </LeadBtn>
       <MobileMenuBtn>
         <MobileMenuIcon />

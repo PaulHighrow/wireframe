@@ -20,7 +20,6 @@ export const SectionTitle = styled.h2`
 export const AboutLeadBtn = styled(LeadBtn)`
   display: block;
   margin: 0 auto;
-  max-width: 200px;
   text-align: center;
   padding: 10px;
 
@@ -28,7 +27,7 @@ export const AboutLeadBtn = styled(LeadBtn)`
     position: absolute;
     left: -12px;
     top: -12px;
-    display: none;
+    opacity: 0;
     content: url(${raysIcon});
     width: 25px;
     height: 25px;
@@ -38,6 +37,7 @@ export const AboutLeadBtn = styled(LeadBtn)`
   &:hover::before,
   &:focus::before {
     display: block;
+    opacity: 1;
   }
 `;
 

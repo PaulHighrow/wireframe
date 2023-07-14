@@ -32,14 +32,13 @@ export const HeroLeadBtn = styled(LeadBtn)`
   position: relative;
 
   text-align: center;
-  padding: 10px 40px;
   margin-bottom: 100px;
 
   &::before {
     position: absolute;
     left: -12px;
     top: -12px;
-    display: none;
+    opacity: 0;
     content: url(${raysIcon});
     width: 25px;
     height: 25px;
@@ -48,6 +47,6 @@ export const HeroLeadBtn = styled(LeadBtn)`
 
   &:hover::before,
   &:focus::before {
-    display: block;
+    opacity: 1;
   }
 `;

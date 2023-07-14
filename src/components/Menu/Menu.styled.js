@@ -44,7 +44,7 @@ export const MobileMenuIcon = styled(IoMenu)`
   }
 `;
 
-export const Nav = styled.nav`
+export const Navigation = styled.nav`
   display: none;
 
   @media screen and (min-width: 768px) {
@@ -57,17 +57,18 @@ export const Nav = styled.nav`
     font-size: 20px;
   }
 `;
-export const NavList = styled.ul`
+export const NavigationList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 20px;
   color: var(--secondary-color);
   justify-content: center;
 `;
-export const Navink = styled.a`
+export const NavigationLink = styled.a`
   text-decoration: none;
   text-transform: uppercase;
   color: var(--secondary-color);
+  transition: color var(--animation-global);
   &:hover,
   &:focus {
     color: white;
@@ -85,7 +86,7 @@ export const Logo = styled(GiGraduateCap)`
   flex-shrink: 0;
   height: 100%;
   fill: var(--secondary-color);
-  transition: transform var(--animation-global);
+  transition: fill var(--animation-global), transform var(--animation-global);
 
   ${LogoLink}:hover & {
     fill: red;
@@ -96,11 +97,14 @@ export const Logo = styled(GiGraduateCap)`
 export const LeadBtn = styled.button`
   padding: 10px 10px;
   font-weight: 700;
+  width: 200px;
   border: 2px solid #fff;
   border-radius: 20px;
   background-color: var(--secondary-color);
   text-align: center;
   position: relative;
+  transition: background-color var(--animation-global),
+    border-color var(--animation-global), color var(--animation-global);
 
   &:hover,
   &:focus {
@@ -113,19 +117,16 @@ export const LeadBtn = styled.button`
     position: absolute;
     left: -12px;
     top: -12px;
-    display: none;
     content: url(${raysIcon});
     width: 25px;
     height: 25px;
     margin-right: 5px;
+    opacity: 0;
+    transition: opacity var(--animation-global);
   }
 
   &:hover::before,
   &:focus::before {
-    display: block;
-  }
-
-  @media screen and (min-width: 1000px) {
-    padding: 10px 40px;
+    opacity: 1;
   }
 `;

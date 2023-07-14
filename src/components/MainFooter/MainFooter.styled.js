@@ -17,10 +17,10 @@ export const FooterLogo = styled(Logo)`
 `;
 
 export const FooterTitle = styled.h3`
-  text-align: start;
+  text-align: center;
   color: var(--secondary-color);
   -webkit-text-stroke: 2px var(--main-color);
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
 
   margin-bottom: 20px;
@@ -42,36 +42,50 @@ export const FacebookBtn = styled(AiOutlineFacebook)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
+  transition: fill var(--animation-global), transform var(--animation-global);
+
   ${LogoLink}:hover & {
     fill: red;
+    transform: scale(1.2);
   }
 `;
 export const YouTubeBtn = styled(AiOutlineYoutube)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
+  transition: fill var(--animation-global), transform var(--animation-global);
+
   ${LogoLink}:hover & {
     fill: red;
+    transform: scale(1.2);
   }
 `;
 export const InstagramBtn = styled(AiOutlineInstagram)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
+  transition: fill var(--animation-global), transform var(--animation-global);
+
   ${LogoLink}:hover & {
     fill: red;
+    transform: scale(1.2);
   }
 `;
 export const TikTokBtn = styled(BiLogoTiktok)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
+  transition: fill var(--animation-global), transform var(--animation-global);
+
   ${LogoLink}:hover & {
     fill: red;
+    transform: scale(1.2);
   }
 `;
 
-export const Contacts = styled.div``;
+export const Contacts = styled.div`
+  text-align: center;
+`;
 
 export const ContactsList = styled.ul`
   display: grid;
@@ -81,6 +95,7 @@ export const ContactsList = styled.ul`
 export const ContactLink = styled.a`
   font-size: 20px;
   font-weight: 500;
+  transition: color var(--animation-global);
 
   &:hover,
   &:focus {
