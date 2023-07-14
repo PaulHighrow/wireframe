@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wireframe/static/css/main.2984087a.css",
-    "main.js": "/wireframe/static/js/main.fd818b10.js",
+    "main.js": "/wireframe/static/js/main.224e2c1c.js",
     "static/media/hero-bg.jpg": "/wireframe/static/media/hero-bg.f14851a60477a51b95b2.jpg",
     "static/media/hero-bg.webp": "/wireframe/static/media/hero-bg.6504db3b46368d44bd6a.webp",
     "static/media/about-1.webp": "/wireframe/static/media/about-1.6b1fb36ef9252600d455.webp",
@@ -113,12 +113,13 @@
     "static/media/Gilroy-Regular.woff2": "/wireframe/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "static/media/Gilroy-Extrabold.woff2": "/wireframe/static/media/Gilroy-Extrabold.5c5942d3e4d9a9645df4.woff2",
     "index.html": "/wireframe/index.html",
-    "static/media/rays.svg": "/wireframe/static/media/rays.2a510c682bb70d12ef5232058c104577.svg",
+    "static/media/rays-b.svg": "/wireframe/static/media/rays-b.ba3358d9f5d5a745cf4e955d1b791636.svg",
+    "static/media/rays-b-d.svg": "/wireframe/static/media/rays-b-d.07fef5972390479195e09c13ceda7438.svg",
     "main.2984087a.css.map": "/wireframe/static/css/main.2984087a.css.map",
-    "main.fd818b10.js.map": "/wireframe/static/js/main.fd818b10.js.map"
+    "main.224e2c1c.js.map": "/wireframe/static/js/main.224e2c1c.js.map"
   },
   "entrypoints": [
     "static/css/main.2984087a.css",
-    "static/js/main.fd818b10.js"
+    "static/js/main.224e2c1c.js"
   ]
 }
