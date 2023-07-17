@@ -6,6 +6,7 @@ import { LeadForm } from './LeadForm/LeadForm';
 import { useEffect, useState } from 'react';
 import { Menu } from './Menu/Menu';
 import { MainFooter } from './MainFooter/MainFooter';
+import CookieConsent from 'react-cookie-consent';
 
 export const App = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -54,6 +55,17 @@ export const App = () => {
       <Testimonials toggleModal={toggleModal} />
       <MainFooter />
       {isOpenModal && <LeadForm closeModal={closeModal} />}
+      <CookieConsent
+        buttonText="🎓 Погоджуюсь"
+        cookieName="skillhub-consent"
+        style={{ background: '#2B373B' }}
+        buttonStyle={{ background: '#f5ce46', color: '#000000', fontSize: '16px' }}
+        expires={150}
+      >
+        Ми використовуємо файли cookie на нашому веб-сайті, щоб бачити, як ви з
+        ним взаємодієте. Приймаючи, ви погоджуєтесь на використання таких файлів
+        cookie.
+      </CookieConsent>
     </>
   );
 };

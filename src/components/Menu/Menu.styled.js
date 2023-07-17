@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GiGraduateCap } from 'react-icons/gi';
+import { ReactComponent as LogoIcon } from '../../img/svg/logo-h.svg';
 import { IoMenu } from 'react-icons/io5';
 
 import raysBoldIcon from 'img/svg/rays-b.svg';
@@ -90,8 +90,9 @@ export const LogoLink = styled.a`
   text-transform: uppercase;
 `;
 
-export const Logo = styled(GiGraduateCap)`
-  width: 50px;
+export const Logo = styled(LogoIcon)`
+  /* width: 50px; */
+  height: 50px;
   display: block;
   flex-shrink: 0;
   height: 100%;
@@ -128,9 +129,6 @@ export const LeadBtn = styled.button`
     left: -22px;
     top: -20px;
     content: url(${raysBoldIcon});
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
     opacity: 0;
     transition: opacity var(--animation-global);
   }

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Logo, LogoLink } from 'components/Menu/Menu.styled';
+import { LogoLink } from 'components/Menu/Menu.styled';
 
 import {
   AiOutlineFacebook,
@@ -13,17 +13,26 @@ export const Footer = styled.footer`
 
   padding: 10px;
 
-@media screen and (min-width: 768px) {
-  padding: 20px;
-}
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
 
-@media screen and (min-width: 1024px) {
-  padding: 40px;
-}
+  @media screen and (min-width: 1024px) {
+    padding: 40px;
+  }
 `;
 
-export const FooterLogo = styled(Logo)`
-  fill: var(--main-color);
+export const FooterLogo = styled.img`
+  width: 86px;
+  height: 50px;
+  display: block;
+  flex-shrink: 0;
+  height: 100%;
+  transition: transform var(--animation-global);
+
+  ${LogoLink}:hover & {
+    transform: scale(1.2);
+  }
 `;
 
 export const FooterTitle = styled.h3`

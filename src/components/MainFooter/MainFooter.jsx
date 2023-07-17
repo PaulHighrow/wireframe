@@ -14,6 +14,7 @@ import {
   TikTokBtn,
   YouTubeBtn,
 } from './MainFooter.styled';
+import LogoIconF from '../../img/hero/logo-f.png';
 
 export const MainFooter = () => {
   return (
@@ -21,33 +22,59 @@ export const MainFooter = () => {
       <Box>
         <FooterWrapper>
           <LogoLink href="#">
-            <FooterLogo />
+            <FooterLogo  src={`${LogoIconF}`}/>
           </LogoLink>
           <Contacts>
             <FooterTitle>Контакти</FooterTitle>
             <ContactsList>
               <li>
-                <ContactLink href='tel:+380638989102'>+380638989102</ContactLink>
+                <ContactLink href="tel:+380638989102">
+                  +380638989102
+                </ContactLink>
               </li>
               <li>
-                <ContactLink href='mailto:paulhighrow@gmail.com'>paulhighrow@gmail.com</ContactLink>
+                <ContactLink href="mailto:paulhighrow@gmail.com">
+                  paulhighrow@gmail.com
+                </ContactLink>
               </li>
               <li>
-                <ContactLink href='https://goo.gl/maps/71EZU7jTNw8jdYQ36' target='_blank' noopener noreferrer>Одеса, вул. Лейтенанта Шмідта 6</ContactLink>
+                <ContactLink
+                  href="https://goo.gl/maps/71EZU7jTNw8jdYQ36"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Одеса, вул. Лейтенанта Шмідта 6
+                </ContactLink>
               </li>
             </ContactsList>
           </Contacts>
           <FooterSocials>
-            <LogoLink href='https://www.facebook.com/paulhighrow' target='_blank' noopener noreferrer>
+            <LogoLink
+              href="https://www.facebook.com/paulhighrow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FacebookBtn />
             </LogoLink>
-            <LogoLink href='https://www.youtube.com/channel/UCbK35MiYIPQG1r-V4138qhw' target='_blank' noopener noreferrer>
+            <LogoLink
+              href="https://www.youtube.com/channel/UCbK35MiYIPQG1r-V4138qhw"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <YouTubeBtn />
             </LogoLink>
-            <LogoLink href='https://www.instagram.com/paulhighrow/' target='_blank' noopener noreferrer>
+            <LogoLink
+              href="https://www.instagram.com/paulhighrow/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <InstagramBtn />
             </LogoLink>
-            <LogoLink href='https://www.tiktok.com/@paulhighrow' target='_blank' noopener noreferrer>
+            <LogoLink
+              href="https://www.tiktok.com/@paulhighrow"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <TikTokBtn />
             </LogoLink>
           </FooterSocials>
