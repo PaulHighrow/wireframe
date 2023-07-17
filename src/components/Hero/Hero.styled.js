@@ -16,6 +16,7 @@ export const HeroSection = styled.section`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: calc(100vh - 80px);
+  min-height: 500px;
   display: flex;
   align-items: end;
   padding: 10px;
@@ -33,32 +34,90 @@ export const ScreamTopIcon = styled(screamIcon)`
   position: absolute;
   top: 46px;
   left: 48px;
-  width: 143px;
-  height: 138px;
+  width: 107px;
+  height: 102px;
+
+  @media screen and (min-width: 480px) {
+    width: 125px;
+    height: 120px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 143px;
+    height: 138px;
+  }
 `;
 
 export const ScreamBotIcon = styled(screamIcon)`
   position: absolute;
-  bottom: 125px;
-  right: 135px;
-  width: 272px;
-  height: 272px;
+  bottom: 100px;
+  right: 70px;
+  width: 136px;
+  height: 136px;
+
+  @media screen and (min-width: 480px) {
+    bottom: 110px;
+    right: 75px;
+    width: 204px;
+    height: 204px;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 125px;
+    right: 85px;
+    width: 272px;
+    height: 272px;
+  }
 `;
 
 export const LoveTopIcon = styled(loveIcon)`
   position: absolute;
-  bottom: 367px;
-  right: 52px;
-  width: 106px;
-  height: 102px;
+  top: 136px;
+  right: 36px;
+  width: 88px;
+  height: 85px;
+
+  @media screen and (min-width: 480px) {
+    top: 136px;
+    right: 44px;
+    width: 96px;
+    height: 93px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: auto;
+    bottom: 367px;
+    right: 52px;
+    width: 106px;
+    height: 102px;
+  }
 `;
 
 export const LoveBotIcon = styled(loveIcon)`
   position: absolute;
-  bottom: 67px;
-  left: 187px;
-  width: 89px;
-  height: 86px;
+  bottom: 0px;
+  left: 0px;
+  width: 71px;
+  height: 69px;
+
+  @media screen and (min-width: 480px) {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 67px;
+    left: 67px;
+    width: 89px;
+    height: 86px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    bottom: 67px;
+    left: 187px;
+    width: 89px;
+    height: 86px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -91,21 +150,6 @@ export const BtnUnderlay = styled.div`
   margin-bottom: 15%;
 `;
 
-export const LeadBtnPic = styled.picture`
-  position: absolute;
-  z-index: 1;
-  top: -62px;
-  left: -50px;
-
-  width: 144px;
-  height: 95px;
-`;
-
-export const LeadBtnImg = styled.img`
-  width: 144px;
-  height: 95px;
-`;
-
 export const HeroLeadBtn = styled(LeadBtn)`
   position: relative;
   text-align: center;
@@ -131,6 +175,12 @@ export const HeroLeadBtn = styled(LeadBtn)`
     opacity: 1;
   } */
 
+  @media screen and (min-width: 480px) {
+    width: 320px;
+    font-size: 24px;
+    height: 55px;
+  }
+
   @media screen and (min-width: 768px) {
     width: 360px;
     font-size: 30px;
@@ -148,6 +198,13 @@ export const HeroLeadBtn = styled(LeadBtn)`
     background-size: contain;
     width: 96px;
     height: 60px;
+
+    @media screen and (min-width: 480px) {
+      left: -35px;
+      top: -35px;
+      width: 120px;
+      height: 75px;
+    }
 
     @media screen and (min-width: 768px) {
       left: -40px;
@@ -171,6 +228,11 @@ export const HeroLeadBtn = styled(LeadBtn)`
     box-shadow: 0px 0px 45px 10px #00000054;
     transition: box-shadow var(--animation-global),
       transform var(--animation-global);
+
+    @media screen and (min-width: 480px) {
+      width: 320px;
+      height: 55px;
+    }
 
     @media screen and (min-width: 768px) {
       width: 360px;

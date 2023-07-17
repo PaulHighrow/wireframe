@@ -81,7 +81,7 @@ export const PhoneNumber = styled.a`
 
   &:hover,
   &:focus {
-    color: red;
+    color: #fff;
   }
 `;
 

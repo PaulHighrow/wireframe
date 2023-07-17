@@ -21,10 +21,6 @@ export const Hero = ({ toggleModal }) => {
         <LoveBotIcon/>
         <Title>SKILLHUB - твоя платформа можливостей</Title>
         <BtnUnderlay>
-          {/* <LeadBtnPic>
-            <source srcSet={`${flagWebp} 1x`} type="image/webp" />
-            <LeadBtnImg src={`${flagPng}`} alt="British Flag" />
-          </LeadBtnPic> */}
           <HeroLeadBtn onClick={toggleModal}>Надіслати заявку</HeroLeadBtn>
         </BtnUnderlay>
       </Box>

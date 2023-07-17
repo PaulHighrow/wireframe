@@ -70,7 +70,7 @@ export const FacebookBtn = styled(AiOutlineFacebook)`
   transition: fill var(--animation-global), transform var(--animation-global);
 
   ${LogoLink}:hover & {
-    fill: red;
+    fill: #fff;
     transform: scale(1.2);
   }
 `;
@@ -81,7 +81,7 @@ export const YouTubeBtn = styled(AiOutlineYoutube)`
   transition: fill var(--animation-global), transform var(--animation-global);
 
   ${LogoLink}:hover & {
-    fill: red;
+    fill: #fff;
     transform: scale(1.2);
   }
 `;
@@ -92,7 +92,7 @@ export const InstagramBtn = styled(AiOutlineInstagram)`
   transition: fill var(--animation-global), transform var(--animation-global);
 
   ${LogoLink}:hover & {
-    fill: red;
+    fill: #fff;
     transform: scale(1.2);
   }
 `;
@@ -103,7 +103,7 @@ export const TikTokBtn = styled(BiLogoTiktok)`
   transition: fill var(--animation-global), transform var(--animation-global);
 
   ${LogoLink}:hover & {
-    fill: red;
+    fill: #fff;
     transform: scale(1.2);
   }
 `;
@@ -126,6 +126,6 @@ export const ContactLink = styled.a`
 
   &:hover,
   &:focus {
-    color: red;
+    color: #fff;
   }
 `;
