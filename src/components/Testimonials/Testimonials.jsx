@@ -15,7 +15,7 @@ export const Testimonials = ({ toggleModal }) => {
     <TestimonialSection id="testimonials">
       <Box>
         <SectionTitle>Відгуки</SectionTitle>
-        <StyledMarquee pauseOnHover={true} autoFill={true}>
+        <StyledMarquee pauseOnHover={true} >
           <TestimonialImg
             src={`${tstmMarq1png}`}
             alt="Testimonial placeholder"
@@ -26,6 +26,10 @@ export const Testimonials = ({ toggleModal }) => {
           />
           <TestimonialImg
             src={`${tstmMarq3png}`}
+            alt="Testimonial placeholder"
+          />
+          <TestimonialImg
+            src={`${tstmMarq4png}`}
             alt="Testimonial placeholder"
           />
           <TestimonialImg

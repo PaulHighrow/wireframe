@@ -20,7 +20,7 @@ export const LeadForm = ({ closeModal }) => {
 
   return (
     <>
-      <Backdrop />
+      <Backdrop onClick={closeModal}/>
       <Form onSubmit={handleSubmit}>
         <FormCloseBtn onClick={closeModal}>
           <CloseIcon/>

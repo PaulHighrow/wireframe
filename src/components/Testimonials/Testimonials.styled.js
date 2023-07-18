@@ -18,9 +18,26 @@ export const TestimonialSection = styled.section`
 
 export const TestimonialImg = styled.img`
   object-fit: fill;
-  width: 432px;
-  height: 350px;
-  margin-right: 30px;
+  width: 270px;
+  height: 210px;
+  margin-right: 5px;
+  transition: transform var(--animation-global);
+
+  @media screen and (min-width: 768px) {
+    width: 360px;
+    height: 292px;
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 432px;
+    height: 350px;
+    margin-right: 20px;
+  }
+
+  &:hover {
+    transform: rotateX(20deg);
+  }
 `;
 
 export const StyledMarquee = styled(Marquee)`

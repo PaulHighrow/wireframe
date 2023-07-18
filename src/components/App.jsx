@@ -18,7 +18,7 @@ export const App = () => {
 
   const closeModal = () => {
     setIsOpenModal(isOpen => (isOpen = false));
-    !document.body.style.overflowY
+    !document.body.style.overflowY && isOpenModal
       ? (document.body.style.overflowY = 'hidden')
       : (document.body.style.overflowY = '');
   };
@@ -30,21 +30,13 @@ export const App = () => {
       }
     };
 
-    const onBackdropClickClose = event => {
-      if (event.target === 'Escape') {
-        closeModal();
-      }
-    };
-
     window.addEventListener('keydown', onEscapeClose);
-    window.addEventListener('click', onBackdropClickClose);
 
     return () => {
       document.body.style.overflowY = '';
       window.removeEventListener('keydown', onEscapeClose);
-      window.removeEventListener('click', onBackdropClickClose);
     };
-  }, []);
+  });
 
   return (
     <>
@@ -58,7 +50,11 @@ export const App = () => {
       <CookieConsent
         buttonText="🎓 Погоджуюсь"
         cookieName="skillhub-consent"
-        style={{ background: '#2B373B', justifyContent: 'center', alignItems: 'center' }}
+        style={{
+          background: '#2B373B',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
         buttonStyle={{
           background: '#f5ce46',
           color: '#000000',

@@ -15,22 +15,31 @@ export const ServicesSection = styled.section`
 `;
 
 export const ServicesList = styled.ul`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-items: center;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 20px;
+  gap: 10px;
+
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+  }
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
   }
 `;
 
 export const ServiceCard = styled.li`
-  max-width: 480px;
+  flex-basis: calc((100% - 20px) / 2);
   overflow: hidden;
   border-radius: 30px;
+  transition: transform var(--animation-global);
+
+  &:hover {
+    transform: scale(1.01);
+    
+  }
 `;
 
 export const ServiceTitle = styled.h3`

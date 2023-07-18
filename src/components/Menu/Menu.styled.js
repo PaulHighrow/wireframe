@@ -114,6 +114,7 @@ export const LeadBtn = styled.button`
   background-color: var(--secondary-color);
   text-align: center;
   position: relative;
+  outline: transparent;
   transition: background-color var(--animation-global),
     border-color var(--animation-global), color var(--animation-global);
 

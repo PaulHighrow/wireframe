@@ -14,7 +14,7 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 320px;
+  width: 310px;
   padding: 40px;
   border: 2px solid var(--secondary-color);
   margin: 0 auto;
