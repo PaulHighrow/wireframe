@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as LogoIcon } from '../../img/svg/logo-h.svg';
+import { ReactComponent as LogoIcon } from '../../img/svg/LogoHeader.svg';
 import { IoMenu } from 'react-icons/io5';
 
 import raysBoldIcon from 'img/svg/rays-b.svg';
@@ -91,17 +91,16 @@ export const LogoLink = styled.a`
 `;
 
 export const Logo = styled(LogoIcon)`
-  /* width: 50px; */
   height: 50px;
   display: block;
   flex-shrink: 0;
   height: 100%;
-  fill: var(--secondary-color);
-  transition: fill var(--animation-global), transform var(--animation-global);
+  transition: transform var(--animation-global), 
+    filter var(--animation-global);
 
   ${LogoLink}:hover & {
-    fill: red;
     transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #c9c5d7);
   }
 `;
 

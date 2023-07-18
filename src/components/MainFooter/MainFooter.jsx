@@ -12,7 +12,6 @@ import {
   FooterWrapper,
   InstagramBtn,
 } from './MainFooter.styled';
-import LogoIconF from '../../img/hero/logo-f.png';
 
 export const MainFooter = () => {
   return (
@@ -20,7 +19,7 @@ export const MainFooter = () => {
       <Box>
         <FooterWrapper>
           <LogoLink href="#">
-            <FooterLogo  src={`${LogoIconF}`}/>
+            <FooterLogo />
           </LogoLink>
           <Contacts>
             <FooterTitle>Контакти</FooterTitle>
@@ -54,13 +53,6 @@ export const MainFooter = () => {
             >
               <FacebookBtn />
             </LogoLink>
-            {/* <LogoLink
-              href="https://www.youtube.com/channel/UCbK35MiYIPQG1r-V4138qhw"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <YouTubeBtn />
-            </LogoLink> */}
             <LogoLink
               href="https://www.instagram.com/skillhub_edu/"
               target="_blank"
@@ -68,13 +60,6 @@ export const MainFooter = () => {
             >
               <InstagramBtn />
             </LogoLink>
-            {/* <LogoLink
-              href="https://www.tiktok.com/@paulhighrow"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TikTokBtn />
-            </LogoLink> */}
           </FooterSocials>
         </FooterWrapper>
       </Box>

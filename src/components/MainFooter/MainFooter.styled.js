@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LogoLink } from 'components/Menu/Menu.styled';
+import { ReactComponent as LogoIcon } from '../../img/svg/LogoFooter.svg';
 
 import {
   AiOutlineFacebook,
@@ -22,16 +23,16 @@ export const Footer = styled.footer`
   }
 `;
 
-export const FooterLogo = styled.img`
-  width: 86px;
+export const FooterLogo = styled(LogoIcon)`
   height: 50px;
   display: block;
   flex-shrink: 0;
   height: 100%;
-  transition: transform var(--animation-global);
+  transition: transform var(--animation-global), filter var(--animation-global);
 
   ${LogoLink}:hover & {
     transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #00000054);
   }
 `;
 
@@ -67,44 +68,52 @@ export const FacebookBtn = styled(AiOutlineFacebook)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
-  transition: fill var(--animation-global), transform var(--animation-global);
+  transition: fill var(--animation-global), transform var(--animation-global),
+    filter var(--animation-global);
 
   ${LogoLink}:hover & {
     fill: #fff;
     transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #00000054);
   }
 `;
 export const YouTubeBtn = styled(AiOutlineYoutube)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
-  transition: fill var(--animation-global), transform var(--animation-global);
+  transition: fill var(--animation-global), transform var(--animation-global),
+    filter var(--animation-global);
 
   ${LogoLink}:hover & {
     fill: #fff;
     transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #00000054);
   }
 `;
 export const InstagramBtn = styled(AiOutlineInstagram)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
-  transition: fill var(--animation-global), transform var(--animation-global);
+  transition: fill var(--animation-global), transform var(--animation-global),
+    filter var(--animation-global);
 
   ${LogoLink}:hover & {
     fill: #fff;
     transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #00000054);
   }
 `;
 export const TikTokBtn = styled(BiLogoTiktok)`
   fill: var(--main-color);
   width: 40px;
   height: 40px;
-  transition: fill var(--animation-global), transform var(--animation-global);
+  transition: fill var(--animation-global), transform var(--animation-global),
+    filter var(--animation-global);
 
   ${LogoLink}:hover & {
     fill: #fff;
     transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #00000054);
   }
 `;
 
