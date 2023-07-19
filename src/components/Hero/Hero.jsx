@@ -3,10 +3,11 @@ import {
   BtnUnderlay,
   HeroLeadBtn,
   HeroSection,
-  ScreamTopIcon,
-  ScreamBotIcon,
-  LoveTopIcon,
   LoveBotIcon,
+  LoveTopIcon,
+  ScreamBotIcon,
+  ScreamTopIcon,
+  SubTitle,
   Title,
 } from './Hero.styled';
 
@@ -19,7 +20,8 @@ export const Hero = ({ toggleModal }) => {
         <ScreamBotIcon/>
         <LoveTopIcon/>
         <LoveBotIcon/>
-        <Title>SKILLHUB - твоя платформа можливостей</Title>
+        <Title>SKILLHUB</Title>
+        <SubTitle as={'h2'}>твоя платформа можливостей</SubTitle>
         <BtnUnderlay>
           <HeroLeadBtn onClick={toggleModal}>Надіслати заявку</HeroLeadBtn>
         </BtnUnderlay>

@@ -1,11 +1,11 @@
-import styled from 'styled-components';
 import { LogoLink } from 'components/Menu/Menu.styled';
+import styled from 'styled-components';
 import { ReactComponent as LogoIcon } from '../../img/svg/LogoFooter.svg';
 
 import {
   AiOutlineFacebook,
-  AiOutlineYoutube,
   AiOutlineInstagram,
+  AiOutlineYoutube,
 } from 'react-icons/ai';
 import { BiLogoTiktok } from 'react-icons/bi';
 

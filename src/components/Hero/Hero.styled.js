@@ -1,12 +1,8 @@
-import styled from 'styled-components';
-
-import jpegBg from '../../img/hero/skillhub-grad-only-bg.jpg';
-
-import { LeadBtn } from 'components/Menu/Menu.styled';
-import raysBoldIcon from 'img/svg/rays-b.svg';
-import { ReactComponent as screamIcon } from 'img/svg/scream.svg';
 import { ReactComponent as loveIcon } from 'img/svg/love.svg';
+import { ReactComponent as screamIcon } from 'img/svg/scream.svg';
+import styled from 'styled-components';
 import { heroImgsIndex } from '../../img/hero/heroImgs';
+import jpegBg from '../../img/hero/skillhub-grad-only-bg.jpg';
 const { flagWebp } = heroImgsIndex;
 
 export const HeroSection = styled.section`
@@ -85,8 +81,7 @@ export const LoveTopIcon = styled(loveIcon)`
   }
 
   @media screen and (min-width: 768px) {
-    top: auto;
-    bottom: 367px;
+    top: 367px;
     right: 52px;
     width: 106px;
     height: 102px;
@@ -122,25 +117,41 @@ export const LoveBotIcon = styled(loveIcon)`
 
 export const Title = styled.h1`
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   width: 300px;
-  color: var(--secondary-color);
-  -webkit-text-stroke: 2px var(--main-color);
-  font-size: 40px;
+  color: var(--text-color);
+  text-shadow: 0px 17px 50px rgba(0, 0, 0, 0.25);
+  /* -webkit-text-stroke: 2px var(--main-color); */
+  font-family: var(--secondary-font-family);
+  font-size: 50px;
   font-weight: 700;
   text-align: center;
 
   @media screen and (min-width: 768px) {
     width: 480px;
-    font-size: 56px;
+    font-size: 80px;
   }
 
   @media screen and (min-width: 1024px) {
     width: 640px;
-    font-size: 72px;
+    font-size: 100px;
+  }
+`;
+
+export const SubTitle = styled(Title)`
+  top: 35%;
+  text-shadow: 0px 5px 14px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 35px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 45px;
   }
 `;
 
@@ -150,44 +161,35 @@ export const BtnUnderlay = styled.div`
   margin-bottom: 15%;
 `;
 
-export const HeroLeadBtn = styled(LeadBtn)`
+export const HeroLeadBtn = styled.button`
   position: relative;
-  text-align: center;
-
-  font-size: 20px;
-  border-radius: 47px;
   width: 280px;
   height: 45px;
+  padding: 10px 10px;
+
+  text-align: center;
+  border-radius: 47px;
+
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  outline: transparent;
+
   background-color: var(--text-color);
-
-  /* &::before {
-    position: absolute;
-    left: -22px;
-    top: -20px;
-    opacity: 0;
-    content: url(${raysBoldIcon});
-    width: 25px;
-    height: 25px;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    opacity: 1;
-  } */
 
   @media screen and (min-width: 480px) {
     width: 320px;
-    font-size: 24px;
     height: 55px;
+    font-size: 24px;
   }
 
   @media screen and (min-width: 768px) {
     width: 360px;
-    font-size: 30px;
     height: 65px;
+    font-size: 30px;
   }
 
-  &::before {
+  /* &::before {
     position: absolute;
     opacity: 1;
     left: -30px;
@@ -212,7 +214,7 @@ export const HeroLeadBtn = styled(LeadBtn)`
       width: 144px;
       height: 90px;
     }
-  }
+  } */
 
   &::after {
     position: absolute;
@@ -241,6 +243,7 @@ export const HeroLeadBtn = styled(LeadBtn)`
   }
 
   &:hover::after {
+    z-index: -1;
     transform: rotate(2.41deg);
     box-shadow: 0px 0px 22px 5px #c9c5d7;
   }

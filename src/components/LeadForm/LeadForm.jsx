@@ -1,11 +1,11 @@
 import { Backdrop } from 'components/Backdrop/Backdrop.styled';
 import {
-  Form,
-  FormTitle,
-  FormBtn,
-  Input,
-  FormCloseBtn,
   CloseIcon,
+  Form,
+  FormBtn,
+  FormCloseBtn,
+  FormTitle,
+  Input,
 } from './LeadForm.styled';
 
 export const LeadForm = ({ closeModal }) => {

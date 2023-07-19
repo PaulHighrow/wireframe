@@ -1,14 +1,14 @@
 import { Box } from 'components/Box/Box.styled';
 import {
-  AboutSection,
-  SectionTitle,
+  AboutAccent,
+  AboutImg,
   AboutLeadBtn,
   AboutList,
   AboutListItem,
-  AboutText,
-  AboutAccent,
   AboutPic,
-  AboutImg,
+  AboutSection,
+  AboutText,
+  SectionTitle,
 } from './About.styled';
 
 import { aboutImgsIndex } from 'img/aboutUs/aboutImgs';

@@ -1,9 +1,9 @@
+import { IoMenu } from 'react-icons/io5';
 import styled from 'styled-components';
 import { ReactComponent as LogoIcon } from '../../img/svg/LogoHeader.svg';
-import { IoMenu } from 'react-icons/io5';
 
-import raysBoldIcon from 'img/svg/rays-b.svg';
 import raysIconDeformed from 'img/svg/rays-b-d.svg';
+import raysBoldIcon from 'img/svg/rays-b.svg';
 
 export const Header = styled.header`
   padding: 0 10px;
@@ -95,12 +95,11 @@ export const Logo = styled(LogoIcon)`
   display: block;
   flex-shrink: 0;
   height: 100%;
-  transition: transform var(--animation-global), 
-    filter var(--animation-global);
+  transition: transform var(--animation-global), filter var(--animation-global);
 
   ${LogoLink}:hover & {
     transform: scale(1.2);
-    filter: drop-shadow(0px 0px 5px #c9c5d7);
+    filter: drop-shadow(0px 0px 2px #ffd84ccf);
   }
 `;
 
@@ -108,23 +107,26 @@ export const LeadBtn = styled.button`
   padding: 10px 10px;
   font-weight: 700;
   width: 200px;
-  border: 2px solid #fff;
-  border-radius: 20px;
+  border: none;
+  /* border: 2px solid #fff; */
+  border-radius: 47px;
   background-color: var(--secondary-color);
   text-align: center;
   position: relative;
   outline: transparent;
-  transition: background-color var(--animation-global),
-    border-color var(--animation-global), color var(--animation-global);
+  transition: box-shadow var(--animation-global), transform var(--animation-global);
+
 
   &:hover,
   &:focus {
-    background-color: #fff;
+    box-shadow: inset 0px 0px 10px 2px #fff;
+    transform: scale(0.95);
+    /* background-color: #fff;
     border-color: var(--secondary-color);
-    color: var(--main-color);
+    color: var(--main-color); */
   }
 
-  &::before {
+  /* &::before {
     position: absolute;
     left: -22px;
     top: -20px;
@@ -136,5 +138,5 @@ export const LeadBtn = styled.button`
   &:hover::before,
   &:focus::before {
     opacity: 1;
-  }
+  } */
 `;

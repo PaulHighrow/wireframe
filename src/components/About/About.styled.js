@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import { LeadBtn } from 'components/Menu/Menu.styled';
-import raysBoldIcon from 'img/svg/rays-b.svg';
+import styled from 'styled-components';
 
 export const AboutSection = styled.section`
   position: relative;
@@ -29,25 +28,6 @@ export const SectionTitle = styled.h2`
 export const AboutLeadBtn = styled(LeadBtn)`
   display: block;
   margin: 0 auto;
-  text-align: center;
-  padding: 10px;
-
-  &::before {
-    position: absolute;
-    left: -22px;
-    top: -20px;
-    opacity: 0;
-    content: url(${raysBoldIcon});
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    display: block;
-    opacity: 1;
-  }
 `;
 
 export const AboutList = styled.ul`

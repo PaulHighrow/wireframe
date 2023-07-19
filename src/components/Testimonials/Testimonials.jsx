@@ -1,9 +1,9 @@
 import { AboutLeadBtn, SectionTitle } from 'components/About/About.styled';
 import { Box } from 'components/Box/Box.styled';
 import {
-  TestimonialSection,
-  TestimonialImg,
   StyledMarquee,
+  TestimonialImg,
+  TestimonialSection,
 } from './Testimonials.styled';
 
 import { tstmImgsIndex } from 'img/testimonials/testimonialsImgs';

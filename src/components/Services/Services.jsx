@@ -1,6 +1,6 @@
+import { SectionTitle } from 'components/About/About.styled';
 import { Box } from 'components/Box/Box.styled';
 import { ServiceCard, ServicesList, ServicesSection, ServiceText, ServiceTitle } from './Services.styled';
-import { SectionTitle } from 'components/About/About.styled';
 
 export const Services = () => {
   return (

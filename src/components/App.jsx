@@ -1,12 +1,12 @@
-import { Hero } from './Hero/Hero';
+import { useEffect, useState } from 'react';
+import CookieConsent from 'react-cookie-consent';
 import { About } from './About/About';
+import { Hero } from './Hero/Hero';
+import { LeadForm } from './LeadForm/LeadForm';
+import { MainFooter } from './MainFooter/MainFooter';
+import { Menu } from './Menu/Menu';
 import { Services } from './Services/Services';
 import { Testimonials } from './Testimonials/Testimonials';
-import { LeadForm } from './LeadForm/LeadForm';
-import { useEffect, useState } from 'react';
-import { Menu } from './Menu/Menu';
-import { MainFooter } from './MainFooter/MainFooter';
-import CookieConsent from 'react-cookie-consent';
 
 export const App = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);

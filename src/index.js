@@ -1,6 +1,6 @@
+import { App } from 'components/App';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from 'components/App';
 import './fonts/gilroy/gilroy.css';
 import './index.css';
 

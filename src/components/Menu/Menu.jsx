@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react';
 import useSize from '@react-hook/size';
+import { Navigation } from 'components/Navigation/Navigation';
+import { useRef, useState } from 'react';
 import {
   Header,
   LeadBtn,
@@ -9,7 +10,6 @@ import {
   MobileMenuIcon,
   PhoneNumber,
 } from './Menu.styled';
-import { Navigation } from 'components/Navigation/Navigation';
 
 export const Menu = ({ toggleModal }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
