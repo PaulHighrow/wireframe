@@ -31,14 +31,30 @@ export const ServicesList = styled.ul`
 `;
 
 export const ServiceCard = styled.li`
-  flex-basis: calc((100% - 20px) / 2);
+  --items: 1;
+  --gap: 10px;
+  flex-basis: calc((100% - var(--gap) * var(--items)) / var(--items));
   overflow: hidden;
   border-radius: 30px;
-  transition: transform var(--animation-global);
+  transition: transform var(--animation-global), box-shadow var(--animation-global);
+
+  @media screen and (min-width: 480px) {
+    --items: 2;
+    --gap: 15px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    --items: 3;
+    --gap: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    --items: 4;
+  }
 
   &:hover {
     transform: scale(1.01);
-    
+    box-shadow: 2px 2px 10px 1px #ffffff99;
   }
 `;
 

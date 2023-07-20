@@ -5,10 +5,10 @@ import {
   StyledNavigation,
 } from './Navigation.styled';
 
-export const Navigation = () => {
+export const Navigation = ({ toggleMenu }) => {
   return (
     <StyledNavigation>
-      <NavigationList>
+      <NavigationList onClick={toggleMenu}>
         <NavigationItem>
           <NavigationLink href="#">Головна</NavigationLink>
         </NavigationItem>

@@ -20,6 +20,7 @@ import tstmMarq1png from '../../img/testimonials/marquee1.png';
 import tstmMarq2png from '../../img/testimonials/marquee2.png';
 import tstmMarq3png from '../../img/testimonials/marquee3.png';
 import tstmMarq4png from '../../img/testimonials/marquee4.png';
+import tstmMarq5png from '../../img/testimonials/marquee5.png';
 
 export const tstmImgsIndex = {
   tstm1Jpeg,
@@ -44,4 +45,5 @@ export const tstmImgsIndex = {
   tstmMarq2png,
   tstmMarq3png,
   tstmMarq4png,
+  tstmMarq5png,
 };

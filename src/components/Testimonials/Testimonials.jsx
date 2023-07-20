@@ -7,7 +7,7 @@ import {
 } from './Testimonials.styled';
 
 import { tstmImgsIndex } from 'img/testimonials/testimonialsImgs';
-const { tstmMarq1png, tstmMarq2png, tstmMarq3png, tstmMarq4png } =
+const { tstmMarq1png, tstmMarq2png, tstmMarq3png, tstmMarq4png, tstmMarq5png } =
   tstmImgsIndex;
 
 export const Testimonials = ({ toggleModal }) => {
@@ -33,7 +33,7 @@ export const Testimonials = ({ toggleModal }) => {
             alt="Testimonial placeholder"
           />
           <TestimonialImg
-            src={`${tstmMarq4png}`}
+            src={`${tstmMarq5png}`}
             alt="Testimonial placeholder"
           />
         </StyledMarquee>

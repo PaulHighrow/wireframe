@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledNavigation = styled.nav`
   position: absolute;
-  top: 60px;
+  width: 150px;
+  top: 65px;
   right: 10px;
   border-radius: 10px;
   z-index: 5;
@@ -11,6 +12,7 @@ export const StyledNavigation = styled.nav`
   @media screen and (min-width: 768px) {
     position: static;
     display: block;
+    width: auto;
     font-size: 14px;
     font-weight: 500;
   }

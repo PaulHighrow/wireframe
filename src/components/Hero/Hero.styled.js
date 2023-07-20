@@ -7,6 +7,7 @@ const { flagWebp } = heroImgsIndex;
 
 export const HeroSection = styled.section`
   position: relative;
+  margin-top: 80px;
   background-color: var(--main-color);
   background-image: url(${jpegBg});
   background-size: 100% 100%;
@@ -19,6 +20,7 @@ export const HeroSection = styled.section`
 
   @media screen and (min-width: 768px) {
     padding: 20px;
+    margin-top: 0px;
   }
 
   @media screen and (min-width: 1024px) {

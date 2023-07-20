@@ -6,6 +6,11 @@ import raysIconDeformed from 'img/svg/rays-b-d.svg';
 import raysBoldIcon from 'img/svg/rays-b.svg';
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
   padding: 0 10px;
   height: 80px;
   background-color: var(--main-color);
@@ -18,6 +23,7 @@ export const Header = styled.header`
   }
 
   @media screen and (min-width: 1024px) {
+    position: static;
     padding: 0 40px;
   }
 `;
@@ -114,8 +120,8 @@ export const LeadBtn = styled.button`
   text-align: center;
   position: relative;
   outline: transparent;
-  transition: box-shadow var(--animation-global), transform var(--animation-global);
-
+  transition: box-shadow var(--animation-global),
+    transform var(--animation-global);
 
   &:hover,
   &:focus {

@@ -26,7 +26,7 @@ export const Menu = ({ toggleModal }) => {
       <LogoLink href="#">
         <Logo />
       </LogoLink>
-      {(width >= 768 || isMobileMenuOpen) && <Navigation />}
+      {(width >= 768 || isMobileMenuOpen) && <Navigation toggleMenu={toggleMenu}/>}
       {width < 768 && <PhoneNumber href='tel:+380638989102'>+380638989102</PhoneNumber>}
       {width >= 768 && (
         <LeadBtn onClick={toggleModal}> Надіслати заявку </LeadBtn>
