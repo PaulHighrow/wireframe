@@ -43,13 +43,9 @@ export const ServiceCard = styled.li`
     --gap: 15px;
   }
 
-  @media screen and (min-width: 1024px) {
-    --items: 3;
-    --gap: 20px;
-  }
-
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
     --items: 4;
+    --gap: 20px;
   }
 
   &:hover {

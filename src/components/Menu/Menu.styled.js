@@ -19,11 +19,11 @@ export const Header = styled.header`
   justify-content: space-between;
 
   @media screen and (min-width: 768px) {
+    position: static;
     padding: 0 20px;
   }
 
   @media screen and (min-width: 1024px) {
-    position: static;
     padding: 0 40px;
   }
 `;

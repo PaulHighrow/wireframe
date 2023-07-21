@@ -7,22 +7,30 @@ export const AboutSection = styled.section`
 
   padding: 20px 10px;
 
-@media screen and (min-width: 768px) {
-  padding: 20px;
-}
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
 
-@media screen and (min-width: 1024px) {
-  padding: 40px;
-}
+  @media screen and (min-width: 1024px) {
+    padding: 40px;
+  }
 `;
 
 export const SectionTitle = styled.h2`
   color: var(--main-color);
   -webkit-text-stroke: 2px var(--secondary-color);
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 56px;
+  }
 `;
 
 export const AboutLeadBtn = styled(LeadBtn)`

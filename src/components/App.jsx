@@ -11,16 +11,16 @@ import { Testimonials } from './Testimonials/Testimonials';
 export const App = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
-  const getVisitorId = async () => {
-    try {
-      const uid = await window.AMOPIXEL_IDENTIFIER.getVisitorUid();
-      return uid;
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  
-  console.log(getVisitorId());
+  // const getVisitorId = async () => {
+  //   try {
+  //     const uid = await window.AMOPIXEL_IDENTIFIER.getVisitorUid();
+  //     return uid;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // console.log(getVisitorId());
 
   const toggleModal = () => {
     setIsOpenModal(isOpen => !isOpen);
