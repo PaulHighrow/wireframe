@@ -8,7 +8,7 @@ import {
   Input,
 } from './LeadForm.styled';
 // import axios from 'axios';
-import token from '../../utils/crm/tokens.json';
+// import token from '../../utils/crm/tokens.json';
 
 // axios.defaults.baseURL = 'https://apeducation.kommo.com/api/v4/';
 // console.log(axios.defaults);
