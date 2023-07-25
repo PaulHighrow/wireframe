@@ -27,11 +27,11 @@ export const LeadForm = ({ closeModal }) => {
   const authenticate = async () => {
     try {
       const authRequest = {
-        client_id: '36270add-d94f-44b9-a27d-0ce6a5659ffc',
+        client_id: '2dea53e7-7074-44ea-835c-f2b3c1301092',
         client_secret:
-          'myZN3V4QDLzGy2cbd9o6TfpeYfhtTOg5bBJsejQjXY8TbI1HauSncGaALNAVtWwK',
+          '46iHB6geSPJnSmZaGYPLAqa3bfuvEmK2FvPcFAgjxaSXYWgvmWB01HOvahvluCoa',
         grant_type: 'authorization_code',
-        code: 'def5020046ca821783c416df629fadbc2eee2e1590b56bc1dbdb8e2a0666b43f21c6172fce5c7d7d00a0ff1cc972ec3e4fe2172191a1152c54f6721dc688e51c130041a70222c2e1786c9eddb1f38d6bd826bc67b9c20ebdbee683f14d097796c0cae358d744f3ed9b2fbd67c844543274892cdc437e02f2d7ac435f30d6cb271879a4a9adb0ee1f9ea45b59f3c8cbacacbbcbc925ddf913836223aac19e4d226712547f81e0ab897ef1dbae72a351ce3f302547ac7e7669caf0eb8e569ebd4acbf8f42ea2e908a6971cc8eed87f9cee6eeda15411c79f203be9ca37e22fd8477fd9c80f12e1e96101c1c5f07832fd31594ac39116460f6211f5eb241898f719139adc2818ab53d6a88d248baf9af389ba5e021b39427c94b429ead2ecd0f65c50473b0c0ea179b73877a6e1b3fbdda344c5c40950306aad0697d0a66ffec573b821afeca3ed5b94b62f1e846996867921ffb7186021f5573185d30578448e7bd6e9dd8d47b421f210bca7ca7fc65e157605b58caccfa8229d6dce9d3f3a749420b8d77e16a504ed3992c8817bfb1292d618fb3ddd96c9d98e25069f8965a43345a7354ce16586693b6213ea4abd7ea88cd61dbb87588221f9de2204596765d36ae7a575f73ce372768f879a1f23d4e070fab1b516d179845655ae2ff67a816d216f40b3781613af22d131ad628c330b2b3a06cb040e2cc75c47',
+        code: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU2NWIyNzk0OGI2MjVhNGIzMjg2YjEyNjM2NDIxMjc2MzQ4Nzg1NmRiMTYyMDM3NTVlZWQxNWYwZjU1ZTAyZThkZjNmMmVhYjRhY2U4OTYxIn0.eyJhdWQiOiIyZGVhNTNlNy03MDc0LTQ0ZWEtODM1Yy1mMmIzYzEzMDEwOTIiLCJqdGkiOiI1NjViMjc5NDhiNjI1YTRiMzI4NmIxMjYzNjQyMTI3NjM0ODc4NTZkYjE2MjAzNzU1ZWVkMTVmMGY1NWUwMmU4ZGYzZjJlYWI0YWNlODk2MSIsImlhdCI6MTY5MDI3MDk0MCwibmJmIjoxNjkwMjcwOTQwLCJleHAiOjE2OTAzNTczNDAsInN1YiI6Ijk3Nzk3NDMiLCJncmFudF90eXBlIjoiIiwiYWNjb3VudF9pZCI6MzA5MzYwOTUsImJhc2VfZG9tYWluIjoia29tbW8uY29tIiwidmVyc2lvbiI6InYxIiwic2NvcGVzIjpbInB1c2hfbm90aWZpY2F0aW9ucyIsImZpbGVzIiwiY3JtIiwiZmlsZXNfZGVsZXRlIiwibm90aWZpY2F0aW9ucyJdfQ.g1EIGRGm-e2I23a6TpOJpOKfr3OpcpXB9DItaWmI-Hb8tq1sj-8oIot6aL60EDo2gF6Z_XY3lutBZ6im1_TTLkoYuiIHbEgB2DuUJnTkwDIb-Qqjl7mIY-i_5WyUtJcsMTYJpMDJFiezNAER6M_GKITkcYkNPW7RpLA8OkwPPiviklEDnv5jPdSPwA3pxfjhvr2CVgzTtWe6KUnEaDn7dfHEe0g_K6M_n7KeXvk8mbHtMLJxP5mdIUJR2usWzxExM11JzR3O0ut5oSnTrf1Lm8qirIR0xef4TkVs00UQj6nC-vgZooODgXy2DfHChLyekq3BmKaC2ZMCjJ3AC01cSg',
         redirect_uri: 'https://paulhighrow.github.io/wireframe/',
       };
 
@@ -47,13 +47,45 @@ export const LeadForm = ({ closeModal }) => {
       console.log(options.headers);
       const response = await fetch(authUrl, options);
       console.log(response);
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const refreshToken = async () => {
+    try {
+      const refreshRequest = {
+        client_id: '2dea53e7-7074-44ea-835c-f2b3c1301092',
+        client_secret:
+          '46iHB6geSPJnSmZaGYPLAqa3bfuvEmK2FvPcFAgjxaSXYWgvmWB01HOvahvluCoa',
+        grant_type: 'authorization_code',
+        refresh_token: 'def502002a494ab59bcf558b326607c1ea3412edef532e52aa48a18193288b872ffcb348a5c281220aeab5d2a2233a43e682827c79a28fb2fb8969976f1adc0897eb8b8489d11a74edf244f269bcbbb5d57385bb122bafe8aa00f35830f3a0757c1bfcc766e21c4eb5c82180728da6108ea75b349221e4ad27c12fac69b5a9b8a18b7884790c4e7a594e42bef2e5f072317475e5c61ce299cac65394ca8841a2f0358b10f5715d57fe8fb9dff500422177dfcdd9de2d161181a79c62b07540c9d246856ecf7bdb1205ee557baa0405de934d5adb57a954a5d9112ed80e26cfbb4c1c85158a25d8bcf068b2909c6cbd8178d8c36a3db4e92e11f55493ae444589934188b44dc6132a3d1f3daad6c740d2ca490482eee3702f71e547a4e3a1becde763c6588739820d117d6998384cad9de79ed09ecc08e8cd92e9b334a3ecbafe41724aeac300c4ca2c0652f9866cc5594d65a0e50ac2e7081f066add695b054662413f00aeb5323efd9edbeabd448b9723894785b37231d6e660bfcb4b41218b7499cbced365db98fb59153b8030b2f7b2aded11e895f3fe5fdec03adfbf70a79115add95f8cdafbc512d98cebd36a45d9866664fc4a7821feb571c36e4a87384f6638b81bc27663a71bc0486d67f8a545aa6955e400ce5b35917b5c4f79d264970d5d5c04087340fd8cfaa0137f72db',
+        redirect_uri: 'https://paulhighrow.github.io/wireframe/',
+      };
+
+      const options = {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(refreshRequest),
+      };
+
+      console.log(options.headers);
+      const response = await fetch(authUrl, options);
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    authenticate();
+    const auth = authenticate();
+    if (!auth.status) {
+      refreshToken();
+    }
   });
 
   const handleSubmit = async e => {
