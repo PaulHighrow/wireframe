@@ -27,11 +27,11 @@ export const LeadForm = ({ closeModal }) => {
   const authenticate = async () => {
     try {
       const authRequest = {
-        client_id: '2dea53e7-7074-44ea-835c-f2b3c1301092',
+        client_id: 'a6366f2c-eb78-462d-9239-07db1bbf8a97',
         client_secret:
-          '46iHB6geSPJnSmZaGYPLAqa3bfuvEmK2FvPcFAgjxaSXYWgvmWB01HOvahvluCoa',
+          'Q4OyG4DZ1kn3wQY2egP4d3YD6eOFbdNMAvxUBQgTiGC82GlOYP2ceXn9xLFUD0Oq',
         grant_type: 'authorization_code',
-        code: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU2NWIyNzk0OGI2MjVhNGIzMjg2YjEyNjM2NDIxMjc2MzQ4Nzg1NmRiMTYyMDM3NTVlZWQxNWYwZjU1ZTAyZThkZjNmMmVhYjRhY2U4OTYxIn0.eyJhdWQiOiIyZGVhNTNlNy03MDc0LTQ0ZWEtODM1Yy1mMmIzYzEzMDEwOTIiLCJqdGkiOiI1NjViMjc5NDhiNjI1YTRiMzI4NmIxMjYzNjQyMTI3NjM0ODc4NTZkYjE2MjAzNzU1ZWVkMTVmMGY1NWUwMmU4ZGYzZjJlYWI0YWNlODk2MSIsImlhdCI6MTY5MDI3MDk0MCwibmJmIjoxNjkwMjcwOTQwLCJleHAiOjE2OTAzNTczNDAsInN1YiI6Ijk3Nzk3NDMiLCJncmFudF90eXBlIjoiIiwiYWNjb3VudF9pZCI6MzA5MzYwOTUsImJhc2VfZG9tYWluIjoia29tbW8uY29tIiwidmVyc2lvbiI6InYxIiwic2NvcGVzIjpbInB1c2hfbm90aWZpY2F0aW9ucyIsImZpbGVzIiwiY3JtIiwiZmlsZXNfZGVsZXRlIiwibm90aWZpY2F0aW9ucyJdfQ.g1EIGRGm-e2I23a6TpOJpOKfr3OpcpXB9DItaWmI-Hb8tq1sj-8oIot6aL60EDo2gF6Z_XY3lutBZ6im1_TTLkoYuiIHbEgB2DuUJnTkwDIb-Qqjl7mIY-i_5WyUtJcsMTYJpMDJFiezNAER6M_GKITkcYkNPW7RpLA8OkwPPiviklEDnv5jPdSPwA3pxfjhvr2CVgzTtWe6KUnEaDn7dfHEe0g_K6M_n7KeXvk8mbHtMLJxP5mdIUJR2usWzxExM11JzR3O0ut5oSnTrf1Lm8qirIR0xef4TkVs00UQj6nC-vgZooODgXy2DfHChLyekq3BmKaC2ZMCjJ3AC01cSg',
+        code: 'def5020027d3577c6dcce58d31fb5ba70a410ce25e01c59a57ef9be0d8475309d6683e225c49389ec39db159ae042f855521dd33b898ee89f173968975707f56078e279fc6fb92dfa181c60c10b6206ae960b0b74907dc6d96752a22d06a4b80db30f6508a2e01ba1b521eb8cd3da6dc709a0038ee1e4b7be26237db9233cc5ed48865488b096fa0beb35bf2680f0ec1af830f01b51dceb95c816cf842a59904838d57533c24a6467abaa9a887b11b5a909139bbaa3fdc55a0a92d94ef68d88ddbf2997fc1e7a0a27e94b143f2cc7583c8ff169508a6a9b7e069f6149fc171b88e9d097397c1b95f9ec80d3e61ecf1c5ce8e354f43cdf087a3adc01a97653eb9f68398ddac0c0eff68fac53f99f8b912af38879fb0e44f5d88295f91047e26272f9e569115535b17413e08a8fa191d5e131db199f3bdc7d9efaac0eba653518dc726ad172a689f4ab56d207d59c1c13bdc1643ac24f2ac442a8a93a66be3d01798033aa7c35554898c212289342a071d159cb78b38bf803f2ce958b79b85c4634f23cfb12e9002063e994e733f5906aab254587a7376e7d3e02fb6caac5f2ec980c6528cbe17d6fbc82dc5ae7f6d29d3c924474b6e894603d7d29b13f87e56055917fadff79ec79ef8ecd0b6bc33fe698fad30c97bb3de8402d1430b547039e46de63517af4854a7745312edcfeadb23cc10ecd32b599d7d95fa',
         redirect_uri: 'https://paulhighrow.github.io/wireframe/',
       };
 
@@ -44,7 +44,6 @@ export const LeadForm = ({ closeModal }) => {
         body: JSON.stringify(authRequest),
       };
 
-      console.log(options.headers);
       const response = await fetch(authUrl, options);
       console.log(response);
       return response;
@@ -73,7 +72,6 @@ export const LeadForm = ({ closeModal }) => {
         body: JSON.stringify(refreshRequest),
       };
 
-      console.log(options.headers);
       const response = await fetch(authUrl, options);
       console.log(response);
     } catch (error) {
