@@ -9,7 +9,7 @@ import {
   Input,
 } from './LeadForm.styled';
 
-axios.defaults.baseURL = 'http://192.168.1.245:4000/';
+axios.defaults.baseURL = 'https://skillhub-server.onrender.com';
 console.log(axios.defaults);
 
 export const LeadForm = ({ closeModal }) => {
