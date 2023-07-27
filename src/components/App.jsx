@@ -7,20 +7,12 @@ import { MainFooter } from './MainFooter/MainFooter';
 import { Menu } from './Menu/Menu';
 import { Services } from './Services/Services';
 import { Testimonials } from './Testimonials/Testimonials';
+import { Loader } from 'utils/Loader/Loader';
 
 export const App = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
-
-  // const getVisitorId = async () => {
-  //   try {
-  //     const uid = await window.AMOPIXEL_IDENTIFIER.getVisitorUid();
-  //     return uid;
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // console.log(getVisitorId());
+  // eslint-disable-next-line
+  const [isLoading, setIsLoading] = useState(false);
 
   const toggleModal = () => {
     setIsOpenModal(isOpen => !isOpen);
@@ -44,7 +36,6 @@ export const App = () => {
     window.addEventListener('keydown', onEscapeClose);
 
     return () => {
-      document.body.style.overflowY = '';
       window.removeEventListener('keydown', onEscapeClose);
     };
   });
@@ -77,6 +68,7 @@ export const App = () => {
         ним взаємодієте. Приймаючи, ви погоджуєтесь на використання таких файлів
         cookie.
       </CookieConsent>
+      {isLoading && <Loader />}
     </>
   );
 };

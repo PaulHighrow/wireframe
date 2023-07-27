@@ -8,13 +8,17 @@ import {
   FormTitle,
   Input,
 } from './LeadForm.styled';
+import { Loader } from 'utils/Loader/Loader';
+import { useState } from 'react';
 
 axios.defaults.baseURL = 'https://skillhub-server.onrender.com';
-console.log(axios.defaults);
 
 export const LeadForm = ({ closeModal }) => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async e => {
     e.preventDefault();
+    setIsLoading(isLoading => (isLoading = true));
     const form = e.currentTarget;
 
     const requestValues = {
@@ -25,6 +29,9 @@ export const LeadForm = ({ closeModal }) => {
     try {
       const response = await axios.post('/leads', requestValues);
       console.log(response);
+      form.reset();
+      closeModal();
+      setIsLoading(isLoading => (isLoading = false));
     } catch (error) {
       console.log(error);
     }
@@ -41,6 +48,7 @@ export const LeadForm = ({ closeModal }) => {
         <Input type="text" name="username" placeholder="Ім'я"></Input>
         <Input type="tel" name="phone" placeholder="Телефон"></Input>
         <FormBtn type="submit">Надіслати</FormBtn>
+        {isLoading && <Loader />}
       </Form>
     </>
   );
