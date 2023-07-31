@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import CookieConsent from 'react-cookie-consent';
+import axios from 'axios';
+import { useEffect, useLayoutEffect, useState } from 'react';
+import { Loader } from 'utils/Loader/Loader';
 import { About } from './About/About';
 import { Hero } from './Hero/Hero';
 import { LeadForm } from './LeadForm/LeadForm';
@@ -7,12 +8,24 @@ import { MainFooter } from './MainFooter/MainFooter';
 import { Menu } from './Menu/Menu';
 import { Services } from './Services/Services';
 import { Testimonials } from './Testimonials/Testimonials';
-import { Loader } from 'utils/Loader/Loader';
+import { Consent } from './Consent/Consent';
 
 export const App = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   // eslint-disable-next-line
   const [isLoading, setIsLoading] = useState(false);
+
+  const wakeupRequest = async () => {
+    setIsLoading(isLoading => (isLoading = true));
+    try {
+      const wake = await axios.get('https://skillhub-server.onrender.com');
+      console.log(wake);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(isLoading => (isLoading = false));
+    }
+  };
 
   const toggleModal = () => {
     setIsOpenModal(isOpen => !isOpen);
@@ -25,6 +38,10 @@ export const App = () => {
       ? (document.body.style.overflowY = 'hidden')
       : (document.body.style.overflowY = '');
   };
+
+  useLayoutEffect(() => {
+    wakeupRequest();
+  }, []);
 
   useEffect(() => {
     const onEscapeClose = event => {
@@ -42,32 +59,18 @@ export const App = () => {
 
   return (
     <>
-      <Menu toggleModal={toggleModal} />
-      <Hero toggleModal={toggleModal} />
-      <About toggleModal={toggleModal} />
-      <Services />
-      <Testimonials toggleModal={toggleModal} />
-      <MainFooter />
-      {isOpenModal && <LeadForm closeModal={closeModal} />}
-      <CookieConsent
-        buttonText="🎓 Погоджуюсь"
-        cookieName="skillhub-consent"
-        style={{
-          background: '#2B373B',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-        buttonStyle={{
-          background: '#f5ce46',
-          color: '#000000',
-          fontSize: '16px',
-        }}
-        expires={150}
-      >
-        Ми використовуємо файли cookie на нашому веб-сайті, щоб бачити, як ви з
-        ним взаємодієте. Приймаючи, ви погоджуєтесь на використання таких файлів
-        cookie.
-      </CookieConsent>
+      {!isLoading && (
+        <>
+          <Menu toggleModal={toggleModal} />
+          <Hero toggleModal={toggleModal} />
+          <About toggleModal={toggleModal} />
+          <Services />
+          <Testimonials toggleModal={toggleModal} />
+          <MainFooter />
+          <Consent />
+          {isOpenModal && <LeadForm closeModal={closeModal} />}
+        </>
+      )}
       {isLoading && <Loader />}
     </>
   );
