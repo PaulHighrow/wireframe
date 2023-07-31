@@ -26,7 +26,7 @@ export const LeadForm = ({ closeModal }) => {
     phone: yup
       .string()
       .required('Phone number is required')
-      .min(3, 'Phone number must be at least 3 characters')
+      .min(10, 'Phone number must be at least 10 characters')
       .max(20, 'Phone number must be at most 20 characters'),
   });
 
@@ -64,8 +64,12 @@ export const LeadForm = ({ closeModal }) => {
           <CloseIcon />
         </FormCloseBtn>
         <FormTitle>Оформіть заявку і наш менеджер вам зателефонує</FormTitle>
-        <Input type="text" name="username" placeholder="Ім'я"></Input>
-        <Input type="tel" name="phone" placeholder="Телефон"></Input>
+        <Label>
+          <Input type="text" name="username" placeholder="Ім'я"></Input>
+        </Label>
+        <Label>
+          <Input type="tel" name="phone" placeholder="Телефон"></Input>
+        </Label>
         <FormBtn type="submit">Надіслати</FormBtn>
         {isLoading && <Loader />}
       </Form>

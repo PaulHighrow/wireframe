@@ -37,6 +37,8 @@ export const FormTitle = styled.h3`
   }
 `;
 
+export const Label = styled.label``;
+
 export const Input = styled.input`
   width: 240px;
   padding: 10px 5px;
@@ -53,6 +55,11 @@ export const Input = styled.input`
     background-color: var(--secondary-burnt-color);
     outline: transparent;
   }
+`;
+
+export const InputNote = styled.p`
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 export const FormCloseBtn = styled.button`
