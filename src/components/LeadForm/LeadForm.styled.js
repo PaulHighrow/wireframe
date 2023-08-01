@@ -37,7 +37,12 @@ export const FormTitle = styled.h3`
   }
 `;
 
-export const Label = styled.label``;
+export const Label = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+`;
 
 export const Input = styled.input`
   width: 240px;
@@ -58,7 +63,9 @@ export const Input = styled.input`
 `;
 
 export const InputNote = styled.p`
-  font-size: 18px;
+  color: var(--secondary-burnt-color);
+  text-align: center;
+  font-size: 14px;
   font-weight: 500;
 `;
 

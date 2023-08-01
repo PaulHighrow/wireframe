@@ -2,40 +2,91 @@ import { AboutLeadBtn, SectionTitle } from 'components/About/About.styled';
 import { Box } from 'components/Box/Box.styled';
 import {
   StyledMarquee,
-  TestimonialImg,
+  // TestimonialImg,
+  TestimonialLink,
   TestimonialSection,
 } from './Testimonials.styled';
 
-import { tstmImgsIndex } from 'img/testimonials/testimonialsImgs';
-const { tstmMarq1png, tstmMarq2png, tstmMarq3png, tstmMarq4png, tstmMarq5png } =
-  tstmImgsIndex;
+// import { tstmImgsIndex } from 'img/testimonials/testimonialsImgs';
+// const { tstmMarq1png, tstmMarq2png, tstmMarq3png, tstmMarq4png, tstmMarq5png } =
+//   tstmImgsIndex;
 
 export const Testimonials = ({ toggleModal }) => {
   return (
     <TestimonialSection id="testimonials">
       <Box>
         <SectionTitle>Відгуки</SectionTitle>
-        <StyledMarquee pauseOnHover={true} >
-          <TestimonialImg
+        <StyledMarquee pauseOnHover={true}>
+          {/* <TestimonialImg
             src={`${tstmMarq1png}`}
             alt="Testimonial placeholder"
-          />
-          <TestimonialImg
+          /> */}
+          <TestimonialLink href="https://youtu.be/dQw4w9WgXcQ">
+            <video
+              src="https://res.cloudinary.com/superlist/video/upload/c_scale,q_auto:good,w_700/v1653395875/website/mini%20cards/v2/Animation_nk2ydp.mp4"
+              type="video/mp4"
+              autoPlay={true}
+              width={"500px"}
+              height={"700px"}
+              loop={true}
+              muted={true}
+              data-loaded={true}
+            ></video>
+          </TestimonialLink>
+          <TestimonialLink href="https://youtu.be/dQw4w9WgXcQ">
+            <video
+              src="https://res.cloudinary.com/superlist/video/upload/c_scale,q_auto:good,w_700/v1653395866/website/mini%20cards/v2/Animation_fzjx2c.mp4"
+              type="video/mp4"
+              width={"500px"}
+              height={"700px"}
+              autoPlay={true}
+              loop={true}
+              muted={true}
+              data-loaded={true}
+            ></video>
+          </TestimonialLink>
+          <TestimonialLink href="https://youtu.be/dQw4w9WgXcQ">
+            <video
+              src="https://res.cloudinary.com/superlist/video/upload/c_scale,q_auto:good,w_700/v1653395869/website/mini%20cards/v2/Animation_rel1jl.mp4"
+              type="video/mp4"
+              width={"500px"}
+              height={"700px"}
+              autoPlay={true}
+              loop={true}
+              muted={true}
+              data-loaded={true}
+            ></video>
+          </TestimonialLink>
+          <TestimonialLink href="https://youtu.be/dQw4w9WgXcQ">
+            <video
+              src="https://res.cloudinary.com/superlist/video/upload/v1684536003/website/mini%20cards/v2/Repeat_tkjecn.mp4"
+              type="video/mp4"
+              width={"500px"}
+              height={"700px"}
+              autoPlay={true}
+              loop={true}
+              muted={true}
+              data-loaded={true}
+            ></video>
+          </TestimonialLink>
+
+          {/* <TestimonialImg
             src={`${tstmMarq2png}`}
             alt="Testimonial placeholder"
           />
           <TestimonialImg
             src={`${tstmMarq3png}`}
             alt="Testimonial placeholder"
-          />
-          <TestimonialImg
+          /> */}
+
+          {/* <TestimonialImg
             src={`${tstmMarq4png}`}
             alt="Testimonial placeholder"
           />
           <TestimonialImg
             src={`${tstmMarq5png}`}
             alt="Testimonial placeholder"
-          />
+          /> */}
         </StyledMarquee>
         <AboutLeadBtn onClick={toggleModal}>Надіслати заявку</AboutLeadBtn>
       </Box>

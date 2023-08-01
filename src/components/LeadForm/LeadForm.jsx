@@ -9,6 +9,8 @@ import {
   FormCloseBtn,
   FormTitle,
   Input,
+  InputNote,
+  Label,
 } from './LeadForm.styled';
 import * as yup from 'yup';
 
@@ -17,18 +19,32 @@ axios.defaults.baseURL = 'https://skillhub-server.onrender.com';
 export const LeadForm = ({ closeModal }) => {
   const [isLoading, setIsLoading] = useState(false);
 
+  const [nameValue, setNameValue] = useState('');
+  const [phoneValue, setPhoneValue] = useState('');
+
+  const [nameInputError, setNameInputError] = useState('');
+  const [phoneInputError, setPhoneInputError] = useState('');
+
   const leadValidation = yup.object().shape({
     name: yup
       .string()
-      .required('Name is required')
-      .min(2, 'Name must be at least 2 characters')
-      .max(50, 'Name must be at most 50 characters'),
+      .required("Будь ласка, вкажіть своє ім'я!")
+      .min(2, "Ім'я має складатися не менше ніж з 2 символів!")
+      .max(50, "Ім'я має складатися не більше ніж з 50 символів!"),
     phone: yup
       .string()
-      .required('Phone number is required')
-      .min(10, 'Phone number must be at least 10 characters')
-      .max(20, 'Phone number must be at most 20 characters'),
+      .required('Будь ласка, вкажіть свій номер телефону!')
+      .min(10, 'Номер телефону має складатися не менше ніж з 10 символів!')
+      .max(20, 'Номер телефону має складатися не більше ніж з 20 символів!'),
   });
+
+  const handleChange = e => {
+    const input = e.target;
+    if (input.name === 'username')
+      setNameValue(nameValue => (nameValue = input.value));
+    if (input.name === 'phone')
+      setPhoneValue(phoneValue => (phoneValue = input.value));
+  };
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -50,7 +66,16 @@ export const LeadForm = ({ closeModal }) => {
         closeModal();
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      if (error.errors) {
+        const invalidValue = error.errors[0];
+        if (invalidValue.includes("Ім'я")) {
+          setNameInputError(inputError => (inputError = invalidValue));
+        }
+        if (invalidValue.includes('Номер')) {
+          setPhoneInputError(inputError => (inputError = invalidValue));
+        }
+      }
     } finally {
       setIsLoading(isLoading => (isLoading = false));
     }
@@ -65,10 +90,24 @@ export const LeadForm = ({ closeModal }) => {
         </FormCloseBtn>
         <FormTitle>Оформіть заявку і наш менеджер вам зателефонує</FormTitle>
         <Label>
-          <Input type="text" name="username" placeholder="Ім'я"></Input>
+          <Input
+            type="text"
+            name="username"
+            placeholder="Ім'я"
+            value={nameValue}
+            onChange={handleChange}
+          />
+          {nameInputError ? <InputNote>{`${nameInputError}`}</InputNote> : ''}
         </Label>
         <Label>
-          <Input type="tel" name="phone" placeholder="Телефон"></Input>
+          <Input
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+            value={phoneValue}
+            onChange={handleChange}
+          />
+          {phoneInputError ? <InputNote>{`${phoneInputError}`}</InputNote> : ''}
         </Label>
         <FormBtn type="submit">Надіслати</FormBtn>
         {isLoading && <Loader />}
