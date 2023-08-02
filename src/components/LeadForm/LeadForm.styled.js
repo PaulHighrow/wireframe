@@ -1,8 +1,9 @@
 import { LeadBtn } from 'components/Menu/Menu.styled';
-import styled from 'styled-components';
+import { ErrorMessage, Field, Form } from 'formik';
 import { IoClose } from 'react-icons/io5/';
+import styled from 'styled-components';
 
-export const Form = styled.form`
+export const StyledForm = styled(Form)`
   position: fixed;
   top: 50%;
   left: 50%;
@@ -18,7 +19,7 @@ export const Form = styled.form`
   padding: 40px;
   border: 2px solid var(--secondary-color);
   margin: 0 auto;
-  gap: 20px;
+  gap: 30px;
 
   @media screen and (min-width: 768px) {
     width: 640px;
@@ -38,13 +39,14 @@ export const FormTitle = styled.h3`
 `;
 
 export const Label = styled.label`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 `;
 
-export const Input = styled.input`
+export const Input = styled(Field)`
   width: 240px;
   padding: 10px 5px;
 
@@ -62,7 +64,9 @@ export const Input = styled.input`
   }
 `;
 
-export const InputNote = styled.p`
+export const InputNote = styled(ErrorMessage)`
+  position: absolute;
+  bottom: -16px;
   color: var(--secondary-burnt-color);
   text-align: center;
   font-size: 14px;
