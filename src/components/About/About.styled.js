@@ -1,5 +1,7 @@
 import { LeadBtn } from 'components/Menu/Menu.styled';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import { ReactComponent as SketchIcon } from '../../img/svg/sketchHighlight.svg';
 
 export const AboutSection = styled.section`
   position: relative;
@@ -23,6 +25,7 @@ export const SectionTitle = styled.h2`
   font-weight: 700;
   text-align: center;
   margin-bottom: 40px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
@@ -30,6 +33,35 @@ export const SectionTitle = styled.h2`
 
   @media screen and (min-width: 1024px) {
     font-size: 56px;
+  }
+`;
+
+const sketch = keyframes`
+  0%{
+    stroke-dashoffset: 491;
+  }
+  100% {
+    /* closing the offset makes the line appear to be drawn-in */
+    stroke-dashoffset: 0;
+  }
+`;
+
+export const Sketch = styled(SketchIcon)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 275px;
+  transform: translate(-50%, -50%);
+
+  stroke-dasharray: 491;
+
+  & path {
+    animation-name: ${sketch};
+    animation-duration: 250s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    stroke: #f5ce46;
+    stroke-width: 4px;
   }
 `;
 

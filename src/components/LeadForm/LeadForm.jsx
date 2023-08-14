@@ -3,7 +3,6 @@ import { Backdrop } from 'components/LeadForm/Backdrop/Backdrop.styled';
 import { Formik } from 'formik';
 import { useState } from 'react';
 import { Loader } from 'utils/Loader/Loader';
-import { MaskedInput } from 'utils/MaskedInput/MaskedInput';
 import * as yup from 'yup';
 import {
   CloseIcon,
@@ -83,7 +82,6 @@ export const LeadForm = ({ closeModal }) => {
             <Input type="tel" name="phone" placeholder="Телефон" />
             <InputNote component="p" name="phone" />
           </Label>
-          <MaskedInput />
           <FormBtn type="submit">Надіслати</FormBtn>
           {isLoading && <Loader />}
         </StyledForm>

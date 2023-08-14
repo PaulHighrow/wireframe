@@ -9,6 +9,7 @@ import {
   AboutSection,
   AboutText,
   SectionTitle,
+  Sketch,
 } from './About.styled';
 
 import { aboutImgsIndex } from 'img/aboutUs/aboutImgs';
@@ -25,7 +26,10 @@ export const About = ({ toggleModal }) => {
   return (
     <AboutSection id="aboutus">
       <Box>
-        <SectionTitle>Про нас</SectionTitle>
+        <SectionTitle>
+          Про нас
+          <Sketch />
+        </SectionTitle>
         <AboutList>
           <AboutListItem>
             <AboutText>

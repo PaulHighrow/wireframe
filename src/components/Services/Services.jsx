@@ -1,4 +1,4 @@
-import { SectionTitle } from 'components/About/About.styled';
+import { SectionTitle, Sketch } from 'components/About/About.styled';
 import { Box } from 'components/Box/Box.styled';
 import { ServiceCard, ServicesList, ServicesSection, ServiceText, ServiceTitle } from './Services.styled';
 
@@ -6,7 +6,9 @@ export const Services = () => {
   return (
     <ServicesSection id="services">
       <Box>
-        <SectionTitle>Послуги</SectionTitle>
+        <SectionTitle>Послуги
+          <Sketch/>
+        </SectionTitle>
         <ServicesList>
           <ServiceCard>
             <ServiceTitle>Абітурієнту</ServiceTitle>
