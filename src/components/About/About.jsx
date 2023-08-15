@@ -1,4 +1,5 @@
 import { Box } from 'components/Box/Box.styled';
+import { useInView } from 'react-intersection-observer';
 import {
   AboutAccent,
   AboutImg,
@@ -23,12 +24,16 @@ const {
 } = aboutImgsIndex;
 
 export const About = ({ toggleModal }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <AboutSection id="aboutus">
       <Box>
-        <SectionTitle>
+        <SectionTitle ref={ref}>
           Про нас
-          <Sketch />
+          {inView && <Sketch />}
         </SectionTitle>
         <AboutList>
           <AboutListItem>

@@ -4,11 +4,13 @@ import {
   Sketch,
 } from 'components/About/About.styled';
 import { Box } from 'components/Box/Box.styled';
+import { useInView } from 'react-intersection-observer';
 import {
   StyledMarquee,
   // TestimonialImg,
   TestimonialLink,
   TestimonialSection,
+  Written,
 } from './Testimonials.styled';
 
 // import { tstmImgsIndex } from 'img/testimonials/testimonialsImgs';
@@ -16,12 +18,17 @@ import {
 //   tstmImgsIndex;
 
 export const Testimonials = ({ toggleModal }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <TestimonialSection id="testimonials">
       <Box>
-        <SectionTitle>
+        
+        <SectionTitle ref={ref}>
           Відгуки
-          <Sketch />
+          {inView && <Sketch />}
         </SectionTitle>
         <StyledMarquee pauseOnHover={true}>
           {/* <TestimonialImg
@@ -96,6 +103,7 @@ export const Testimonials = ({ toggleModal }) => {
           /> */}
         </StyledMarquee>
         <AboutLeadBtn onClick={toggleModal}>Надіслати заявку</AboutLeadBtn>
+        {/* <Written /> */}
       </Box>
     </TestimonialSection>
   );

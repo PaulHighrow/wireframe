@@ -1,13 +1,19 @@
 import { SectionTitle, Sketch } from 'components/About/About.styled';
 import { Box } from 'components/Box/Box.styled';
-import { ServiceCard, ServicesList, ServicesSection, ServiceText, ServiceTitle } from './Services.styled';
+import { useInView } from 'react-intersection-observer';
+import { ServiceCard, ServiceText, ServiceTitle, ServicesList, ServicesSection } from './Services.styled';
 
 export const Services = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <ServicesSection id="services">
       <Box>
-        <SectionTitle>Послуги
-          <Sketch/>
+        <SectionTitle ref={ref}>Послуги
+          {inView && <Sketch/>}
         </SectionTitle>
         <ServicesList>
           <ServiceCard>

@@ -26,6 +26,7 @@ export const SectionTitle = styled.h2`
   text-align: center;
   margin-bottom: 40px;
   position: relative;
+  z-index: 1;
 
   @media screen and (min-width: 768px) {
     font-size: 48px;
@@ -36,7 +37,7 @@ export const SectionTitle = styled.h2`
   }
 `;
 
-const sketch = keyframes`
+const sketchAnimation = keyframes`
   0%{
     stroke-dashoffset: 491;
   }
@@ -48,16 +49,16 @@ const sketch = keyframes`
 
 export const Sketch = styled(SketchIcon)`
   position: absolute;
+  z-index: -1;
   top: 50%;
   left: 50%;
   width: 275px;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -50%) rotateY(180deg);
   stroke-dasharray: 491;
 
   & path {
-    animation-name: ${sketch};
-    animation-duration: 250s;
+    animation-name: ${sketchAnimation};
+    animation-duration: 125s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     stroke: #f5ce46;

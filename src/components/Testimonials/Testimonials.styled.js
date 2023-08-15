@@ -1,5 +1,6 @@
 import Marquee from 'react-fast-marquee';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { ReactComponent as WrittenSVG } from '../../img/svg/handWritten.svg';
 
 export const TestimonialSection = styled.section`
   position: relative;
@@ -60,6 +61,33 @@ export const TestimonialLink = styled.a`
 
   &:hover {
     transform: rotateX(20deg);
+  }
+`;
+
+const writeAnimation = keyframes`
+  0%{
+    stroke-dashoffset: 2325;
+  }
+  100% {
+    /* closing the offset makes the line appear to be drawn-in */
+    stroke-dashoffset: 0;
+  }
+`;
+
+export const Written = styled(WrittenSVG)`
+  width: 700px;
+  display: block;
+  margin: 0 auto;
+
+  stroke-dasharray: 2325;
+
+  & path {
+    animation-name: ${writeAnimation};
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    stroke: #f5ce46;
+    stroke-width: 4px;
   }
 `;
 
