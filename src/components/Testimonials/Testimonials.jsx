@@ -10,7 +10,7 @@ import {
   // TestimonialImg,
   TestimonialLink,
   TestimonialSection,
-  Written,
+  // Written,
 } from './Testimonials.styled';
 
 // import { tstmImgsIndex } from 'img/testimonials/testimonialsImgs';

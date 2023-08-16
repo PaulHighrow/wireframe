@@ -14,7 +14,7 @@ import {
 
 export const Hero = ({ toggleModal }) => {
   return (
-    <HeroSection>
+    <HeroSection id='hero'>
       <Box>
         <ScreamTopIcon/>
         <ScreamBotIcon/>

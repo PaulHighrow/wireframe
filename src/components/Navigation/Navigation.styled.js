@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-scroll";
 
 export const StyledNavigation = styled.nav`
   position: absolute;
@@ -54,7 +55,7 @@ export const NavigationItem = styled.li`
   }
 `;
 
-export const NavigationLink = styled.a`
+export const NavigationLink = styled(Link)`
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -65,7 +66,8 @@ export const NavigationLink = styled.a`
   padding: 10px 8px;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: white;
 
     @media screen and (max-width: 767px) {

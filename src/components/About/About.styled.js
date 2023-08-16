@@ -52,9 +52,17 @@ export const Sketch = styled(SketchIcon)`
   z-index: -1;
   top: 50%;
   left: 50%;
-  width: 275px;
+  width: 200px;
   transform: translate(-50%, -50%) rotateY(180deg);
   stroke-dasharray: 491;
+
+  @media screen and (min-width: 768px) {
+    width: 225px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 275px;
+  }
 
   & path {
     animation-name: ${sketchAnimation};

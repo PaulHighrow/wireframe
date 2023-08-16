@@ -1,8 +1,10 @@
 import { ReactComponent as loveIcon } from 'img/svg/love.svg';
 import { ReactComponent as screamIcon } from 'img/svg/scream.svg';
 import styled from 'styled-components';
+
 import { heroImgsIndex } from '../../img/hero/heroImgs';
 import jpegBg from '../../img/hero/skillhub-grad-only-bg.jpg';
+
 const { flagWebp } = heroImgsIndex;
 
 export const HeroSection = styled.section`
