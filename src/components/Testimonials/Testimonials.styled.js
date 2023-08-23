@@ -9,11 +9,11 @@ export const TestimonialSection = styled.section`
   padding: 20px 10px;
 
   @media screen and (min-width: 768px) {
-    padding: 20px;
+    padding: 20px 0;
   }
 
   @media screen and (min-width: 1024px) {
-    padding: 40px;
+    padding: 40px 0;
   }
 `;
 
@@ -42,21 +42,18 @@ export const TestimonialImg = styled.img`
 `;
 
 export const TestimonialLink = styled.a`
-  width: 270px;
-  height: 210px;
-  margin-right: 5px;
+  /* width: 270px;
+  height: 210px; */
   transition: transform var(--animation-global);
 
   @media screen and (min-width: 768px) {
-    width: 360px;
-    height: 292px;
-    margin-right: 10px;
+    /* width: 360px;
+    height: 292px; */
   }
 
   @media screen and (min-width: 1024px) {
-    width: 432px;
-    height: 350px;
-    margin-right: 20px;
+    /* width: 432px;
+    height: 350px; */
   }
 
   &:hover {
